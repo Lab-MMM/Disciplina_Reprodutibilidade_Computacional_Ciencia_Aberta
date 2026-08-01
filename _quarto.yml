@@ -1,0 +1,72 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Reprodutibilidade computacional e principios da ciência aberta"
+        
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    background: "#D9E3E4"
+        
+  sidebar:
+    background: "#D9E3E4"
+    logo: "images/ECMVS_logo.png"
+    align: center
+    style: "docked"
+    search: true
+    tools: 
+      - icon: github
+        href: https://github.com/Lab-MMM/Disciplina_Reprodutibilidade_Computacional_Ciencia_Aberta
+        text: "Repositório do curso"
+      - icon: globe
+        href: https://gabrielnakamura.netlify.app/
+        text: "Website pessoal"
+    
+    contents:
+      - section: "Informações sobre o curso"
+        contents:
+          - text: "Apresentação"
+            href: about.qmd
+          - text: "Cronograma do curso"
+            href: index.qmd
+          - text: "Links para materiais úteis"
+            href: links.qmd
+      - section: "Aulas"
+        contents: 
+        - section: "Introdução a ciência aberta"
+          contents:
+          - text: "Ciência aberta, reprodutibilidade computacional e ciência aberta"
+            href: aulas/aula0_intro_inferencia/index.qmd
+        - section: "Organização"
+          contents:
+          - text: "Conhecendo sua máquina - caminhos para arquivos"
+            href: aulas/aula1_phylogenetic_trees/index.qmd
+          - text: "Organização do diretório de trabalho local"
+            href: aulas/aula1_phylogenetic_trees/index.qmd
+          - text: "Organização de scripts"
+            href: aulas/aula1_phylogenetic_trees/index.qmd
+            
+        - section: "Versionamento"
+          contents: 
+          - text: "ABC do versionamento"
+            href: aulas/aula2_descricao-padroes_I/index.qmd
+          - text: "Viajando no tempo"
+            href: aulas/aula3_descricao-padroes_II/index.qmd
+          - text: "Trabalho colaborativo - branches, forks, pull requests, issues"
+            href: aulas/aula3_descricao-padroes_II/index.qmd
+          - text: "Conflitos e como evitá-los (ou resolvê-los)"
+            href: aulas/aula3_descricao-padroes_II/index.qmd
+format:
+  html:
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
+    mainfont: "Atkinson Hyperlegible"
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+
+freeze: auto
+
+editor: visual
