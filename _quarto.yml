@@ -36,26 +36,41 @@ website:
         contents: 
         - section: "Introdução a ciência aberta"
           contents:
-          - text: "Ciência aberta, reprodutibilidade computacional e ciência aberta"
-            href: aulas/aula0_intro_inferencia/index.qmd
+          - text: "Introdução a Ciência Aberta"
+            href: aulas/ciencia_aberta/index.qmd
+          - text: "Dados abertos"
+            href: aulas/dados_abertos/index.qmd
         - section: "Organização"
           contents:
           - text: "Conhecendo sua máquina - caminhos para arquivos"
-            href: aulas/aula1_phylogenetic_trees/index.qmd
+            href: aulas/organizacao_local_caminhos/index.qmd
           - text: "Organização do diretório de trabalho local"
             href: aulas/aula1_phylogenetic_trees/index.qmd
           - text: "Organização de scripts"
             href: aulas/aula1_phylogenetic_trees/index.qmd
-            
         - section: "Versionamento"
           contents: 
-          - text: "ABC do versionamento"
-            href: aulas/aula2_descricao-padroes_I/index.qmd
+          - text: "Ferramentas para controle de versão"
+            href: aulas/aula0_intro_reprodutibilidade/index.qmd
+          - text: "Introdução ao controle de versão"
+            href: aulas/aula1_git_github_basics/index.qmd
           - text: "Viajando no tempo"
             href: aulas/aula3_descricao-padroes_II/index.qmd
           - text: "Trabalho colaborativo - branches, forks, pull requests, issues"
             href: aulas/aula3_descricao-padroes_II/index.qmd
           - text: "Conflitos e como evitá-los (ou resolvê-los)"
+            href: aulas/aula3_descricao-padroes_II/index.qmd
+          - text: "Versionando pacotes e dependências"
+            href: aulas/aula3_descricao-padroes_II/index.qmd
+          - text: "Releases e depósito permanente"
+            href: aulas/aula3_descricao-padroes_II/index.qmd
+          - text: "Glossário do versionamento"
+            href: aulas/glossario/index.qmd
+        - section: "Documentos dinâmicos"
+          contents: 
+          - text: "O que são e como funcionam"
+            href: aulas/aula3_descricao-padroes_II/index.qmd
+          - text: "Além do artigo - materiais suplementares, vinhetas, sítios públicos"
             href: aulas/aula3_descricao-padroes_II/index.qmd
 format:
   html:

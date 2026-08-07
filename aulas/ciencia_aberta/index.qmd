@@ -1,0 +1,139 @@
+---
+title: "Ciência Aberta"
+author: "Melina Leite"
+format:
+  html:
+    code-copy: true
+    code-tools:
+      source: true
+      toggle: true # Opcional: esconde o botão de ocultar/mostrar códigos se não quiser
+bibliography: references.bib
+---
+
+# O que é ciência aberta?
+
+Nesta primeira aula, navegaremos pelas fascinantes paisagens da ciência aberta,
+    avaliando sua origem, histórico e múltiplos significados.
+
+A **ciência aberta** é um movimento dentro da ciência que busca a abertura do
+    processo de conhecimento científico, de forma que **TODAS** as atividades
+    científicas, e não só o resultado final, sejam praticadas de forma
+    transparente, colaborativa, e que seus resultados sejam confiáveis e
+    re-utilizáveis, tanto para outros cientistas quanto para a sociedade em
+    geral.
+
+A grosso modo, podemos dizer que a ciência aberta é um grande guarda-chuva
+    formado por várias iniciativas de reestruturação da forma de fazer ciência,
+    e portanto, recebe influência de diferentes agentes como os próprios
+    cientistas, as agências de fomento/financiadores, governos, e cidadãos.
+
+Nesta aula, vamos discutir primeiro o que **não é ciência aberta** - má conduta,
+    fraudes, plágio, pesquisa irreprodutível, erros não corrigidos - e a
+    importância da **integridade e boas práticas científicas.**
+
+Vamos refletir um pouco em como a **má ciência** pode estar sendo selecionada no
+    ambiente acadêmico (@ioannidisWhyScienceNot2012a, @smaldinoNaturalSelectionBad2016a) devido a incentivos institucionais
+    destorcidos voltados para quantidade - "publish-A-LOT-or-perish", o
+    prestígio manipulado por revistas e as métricas de qualidade/quantidade
+    usadas para avaliação de revistas, pesquisadores e instituições.
+
+Discutiremos as principais **dimensões da ciência aberta**, taxonomias e
+    esquemas que nos ajudem a entender um pouco melhor os principais elementos
+    do movimento da ciência aberta.
+
+Abordaremos algumas **políticas de ciência aberta**, focada em iniciativas
+   nacionais e a reflexão sobre os vários discursos de ciência aberta dentro
+   destas políticas nacionais, internacionais e supra-nacionais.
+   
+# Razões para a Ciência Aberta
+
+Abaixo, 10 razões para praticarmos e nos importamos com uma ciência mais aberta (retirado do [curso da FioCruz sobre ciência aberta](https://campusvirtual.fiocruz.br/portal/node/38010), recomendo fazer!):
+
+1.  Preserva, valoriza e partilha a produção científica.
+
+2.  Promove o Acesso Aberto aos dados e publicações científicas.
+
+3.  Protege e valoriza a propriedade intelectual.
+
+4.  Promove a eficiência do processo científico.
+
+5.  Aumenta a visibilidade e reconhecimento dos investigadores e das instituições.
+
+6.  Amplifica o impacto da investigação, estimula a criatividade e a inovação.
+
+7.  Promove a responsabilidade social científica e a apropriação social do conhecimento.
+
+8.  Promove a transparência e o conhecimento do processo científico.
+
+9.  Envolve a sociedade no processo de (co)criação e fruição do conhecimento.
+
+10. Democratiza o acesso ao conhecimento científico e potencia o desenvolvimento.
+
+# Leituras recomendadas
+
+1.  Albornoz D, Huang M, Martin I, Mateus M, Touré A, Chan L (2018) Framing Power: Tracing Key Discourses in Open Science Policies. ELectronic PUBlishing. <https://doi.org/10.4000/proceedings.elpub.2018.23>
+
+2.  Bezjak S, Clyburne-Sherin A, Conzett P, et al (2018) Open Science Training Handbook. <https://doi.org/10.5281/zenodo.1212496>
+
+3.  Brainard J (2023) [Fake scientific papers are alarmingly common](https://www.science.org/content/article/fake-scientific-papers-are-alarmingly-common) Science
+
+4.  Brainard J, You J (2018) [What a massive database of retracted papers reveals about science publishing's 'death penalty'](https://www.science.org/content/article/what-massive-database-retracted-papers-reveals-about-science-publishing-s-death-penalty) Science
+
+5.  Costa MPD, Leite FCL (2019) Panorama preliminar do desenvolvimento da ciência aberta. <https://doi.org/10.26512/9788564593787>
+
+6.  FAPESP (2014) [Código de Boas Práticas Científicas](https://fapesp.br/boaspraticas/)
+
+7.  Ioannidis JPA (2012) Why Science Is Not Necessarily Self-Correcting. Perspectives on Psychological Science 7:645--654 <https://doi.org/10.1177/1745691612464056>
+
+8.  Powers SM, Hampton SE (2019) Open science, reproducibility, and transparency in ecology. Ecological Applications 29:e01822. <https://doi.org/10.1002/eap.1822>
+
+9.  Santos-D'amorim K, Correia AEGC, Miranda MKF de O, Santa-Cruz P (2021) Reasons and implications of retracted articles in Brazil. Transinformação 33:e210001. <https://doi.org/10.1590/2318-0889202133e210001>
+
+10. Smaldino PE, McElreath R (2016) The natural selection of bad science. Royal Society Open Science 3:160384. <https://doi.org/10.1098/rsos.160384>
+
+11. UNESCO (2021) Recomendação da UNESCO sobre Ciência Aberta. <https://doi.org/10.54677/XFFX3334>
+
+12. USP (2023) [Guia de Boas Práticas Científicas](https://prp.usp.br/wp-content/uploads/sites/649/2016/05/PRP_Guia-de-Boas-Pr%C3%A1ticas-Cientificas_2019_2-1.pdf).
+
+13. [Declaração USP de Apoio à Ciência Aberta](https://cienciaaberta.usp.br/declaracao-usp-de-apoio-a-ciencia-aberta/) -- Ciência Aberta USP.
+
+14. Inovação e governo aberto na ciência - Monitoramento e Execução. In: Controladoria-Geral da União. <https://www.gov.br/cgu/pt-br/governo-aberto/a-ogp/planos-de-acao/4o-plano-de-acao-brasileiro/compromisso-3-docs/inovacao-e-governo-aberto-na-ciencia-monitoramento-e-execucao.> Accessed 4 Aug 2023
+
+15. Open Government Declaration. In: Open Government Partnership. [https://www.opengovpartnership.org/process/joining-ogp/open-government-declaration/](https://www.opengovpartnership.org/process/joining-ogp/open-government-declaration/.)
+
+16. Transparência em Ciência: novos mecanismos de avaliação para o avanço da Ciência Aberta - Monitoramento e Execução. In: Controladoria-Geral da União. <https://www.gov.br/cgu/pt-br/governo-aberto/a-ogp/planos-de-acao/5o-plano-de-acao-brasileiro/compromisso-8-transparencia-em-ciencia-novos-mecanismos-de-avaliacao-para-o-avanco-da-cie
+ncia-aberta/meio-ambiente-e-floresta-monitoramento-e-execucao.>
+
+17. [O Oscar do microscopista: A ciência precisa superar o conceito de autoria para se adaptar ao século XXI](https://www1.folha.uol.com.br/blogs/ciencia-fundamental/2022/05/o-oscar-do-microscopista.shtml)
+
+18. [Credibilidade científica em debate](https://adufrj.org.br/index.php/pt-br/noticias/arquivo/81-antigas/3028-credibilidade-cientifica-em-debate)
+
+# Sites de interesse
+
+17. Society for Open, Reliable and Transparent Ecology and Evolutionary Biology. In: SORTEE. <https://www.sortee.org/.>
+
+18. Iniciativa Brasileira de Reprodutibilidade. <https://www.reprodutibilidade.bio.br.>
+
+19. Research Data Alliance \| RDA. <https://www.rd-alliance.org/about-rda.>
+
+20. AIMOS. <https://aimos.community.>
+
+21. OpenAIRE. <https://www.openaire.eu/.>
+
+22. Center for Open Science. <https://www.cos.io.>
+
+23. LA Referencia.<https://www.lareferencia.info/en/>
+
+24. Novo curso da Fiocruz trata da gestão e compartilhamento de dados abertos de pesquisa. In: Portal de Periódicos - Fiocruz.<https://periodicos.fiocruz.br/node/1063>
+
+25. O que é Ciência Aberta? - 1º Oferta. In: Campus Virtual Fiocruz.< https://campusvirtual.fiocruz.br/portal/?q=node/38010>
+
+26. Open Science \@ FAPESP. <https://fapesp.br/openscience/>
+
+27. Rede Brasileira De Reprodutibilidade. <https://www.reprodutibilidade.org>
+
+28. ReproducibiliTea. <https://reproducibilitea.org/>
+
+29. SciELO - Brazil. <https://www.scielo.br/>
+
+30. NEPER: Núcleo de Estratégias em Planejamento Experimental e Reprodutibilidade. ICB-USP <https://sites.usp.br/neper/>

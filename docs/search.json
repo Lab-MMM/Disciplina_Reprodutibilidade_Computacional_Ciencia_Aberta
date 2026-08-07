@@ -1,5 +1,125 @@
 [
   {
+    "objectID": "aulas/aula1_git_github_basics/index.html",
+    "href": "aulas/aula1_git_github_basics/index.html",
+    "title": "Introdução ao controle de versão",
+    "section": "",
+    "text": "Vimos nas aulas teóricas que essas palavrinhas não são nada mais que ações que praticamos no nosso dia-a-dia. Agora é hora de colocar em prática.\nJá temos um repositório remoto, agora precisamos que ele exista em nossos computadores para que possamos sincronizar nosso trabalho local e remoto. De maneira geral o que queremos fazer a partir de agora está ilustrado na figura seguinte\n\n\n\n\n\n\n\n\n\nA partir de agora iremos, passo a passo, realizar todas as funções básicas essenciais para organização computacional de um projeto científico.\nO primeiro passo é realizar uma clonagem!\n\n\n\n\n\n\n\nReferência de velho\n\n\n\n\nPara que nosso repositório local esteja ligado ao nosso repositório remoto precisamos primeiro conectá-los. Fazemos isso ao clonar o repositório remoto em nossa máquina. Clonar (clone) nesse caso não é nada mais que criar uma cópia exata de um repositório remoto em sua máquina. A partir desse momento esses repositórios estarão conectados até que o Git os separe.\nPara clonar vá até o repositório remoto de interesse, e copie a chave https, como mostrado na figura a seguir:\n\n\n\n\n\n\n\n\n\nClique no botão de cópia e vamos para o RStudio. No RStudio vá em File e depois New Project. A partir daí siga as imagens abaixo:\n\n\n\n\n\n\n\nCopiando chave https\n\n\n\n\n\n\n\n\n\n\n\n\nAbrindo um novo projeto\n\n\n\n\n\n\n\n\n\n\n\n\nColando a chave https\n\n\n\n\nAo clicar em Create project o repositório remoto será imediatamente transferido para o seu computador. Uma pasta (o diretório local) será criado no local que você escolheu e, assim, RStudio, Git e Github estarão plenamente conectados. Tudo certo até aqui? Uma pausa para descanso com um vídeo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nSe você chegou até aqui sem erros isso quer dizer que Git e GitHub já estão integrados no RStudio. Portanto, qualquer coisa que fizermos nesta pasta está sendo observado a partir de agora pelo git. Para certirficar-se disso, habilite a visualização de arquivos ocultos no seu computador, você vai notar que na raiz desta pasta clonada existe uma pasta .git, como na figura a seguir\n\n\n\n\n\n\n\n\n\nSe você consegue ver esta pasta quer dizer que está tudo certo, e o git está observando (watch no jargão do versionamento) cada modificação e cada arquivo dentro desta pasta (a menos que você inclua o arquivo no .gitignore, mas isso é assunto para outro momento).\n\n\n\n\n\n\n\n\n\nAgora iremos executar funções que, até o fim deste curso, serão quase automáticas no nosso fluxo de trabalho com versionamento.\n\n\nO que é um commit?\nCommit, ou “revisão”, é uma mudança individual em um arquivo ou um conjunto de arquivos dentro da pasta observada pelo git. Os commits são como check-points para o nosso repositório. Uma analogia interessante para os commits foi apresentada na aula e está ilustrada aqui, na figura seguinte\nVamos pensar que nosso projeto é uma montanha, e estamos escalando ele. Nosso objetivo final é, obviamente, finalizar o projeto, chegando ao topo da montanha. A medida que progredimos,caso venhamos a cometer um erro, a queda pode ser grande. Desta maneira, utilizamos grampos onde ancoramos nossa corda a medida que a escalada progride. Em caso de erro, a queda será apenas até o grampo anterior onde a corda foi ancorada. Os commits servem como os clipes que ancoram a corda a medida que progredimos no projeto. Se cometermos um erro em algum arquivo, tudo certo, podemos voltar no commit anterior, ou anteriores, para tentar descobrir onde o erro foi cometido.\nDa mesma forma que na escalada, se utilizarmos clipes muito pertinhos uns dos outros vamos ficar lentos demais, e o progresso até o topo será comprometido, se fizermos muitos commits será difícil voltar em momentos específicos do projeto, visto que terão muitos commits para serem checados. Portanto, a regra é: faça commits com parcimonia, ou seja, nem muitos, nem poucos.\nVamos fazer uma modificação na nossa pasta. Podemos adicionar arquivos, já que ela está vazia. Para tanto vamos usar os arquivos do pacote de dados palmer penguins que estão nesse repositório. Lembre-se de ler os arquivos utilizando o {here} e utilizar o Rproject para abrir o diretório\n\ndata_penguins &lt;- read.csv(here::here(\"data\", \"data-penguins.csv\")) \n\nObs se quiserem usar seus próprios dados fiquem a vontade, o uso do palmerpenguins é apenas opcional e a título de procedimento didático.\nCaso estejam trabalhando com seus próprios dados, jogue os arquivos para dentro do diretório que clonamos. O próximo passo é fazer nosso primeiro commit.\n\n\n\n\n\n\n\n\n\n\n\n\nExistem duas formas de fazer versionamento usando o Git e Github via RStudio. Uma delas é a linha de comando, a outra é via uma interface visual, que nesse caso é o próprio RStudio. Vamos começar fazendo o versionamento via interface visual. A opção para isso é que ninguém se assuste num primeiro momento com a linha de comando, e que isso não seja um impeditivo para utilizar o versionamento no seu fluxo de trabalho. A maioria dos comandos básicos podem ser executados através desta interface gráfica que chamamos de Git Client\nRepare que seu RStudio agora tem algumas coisas novas. Especificamente, veja que agora ele tem uma aba chamada Git, como ilustrado na figura abaixo\n\n\n\n\n\n\n\n\n\nIsso indica que o git está funcionando no seu diretório, e agora podemos fazer o versionamento deste diretório local e sincronizá-lo com o repositório remoto.\nTudo e qualquer coisa que for adicionado ou modificado na sua pasta vai aparecer na janela abaixo da aba git. Como mostrado na figura abaixo\n\n\n\n\n\n\n\n\n\nComo eu mencionei na aula teórica e aqui acima, o commit é como um track changes do word, mas melhor. Precisamos fazer um track change manual, indicando o que foi modificado, isso é o nosso commit. Para realizar um commit via a interface do RStudio você precisa:\n1 - Clicar no botão commit pending changes (ou em qualquer botão naquela aba), como mostrado abaixo\n\n\n\n\n\n\n\n\n\n2 - Isso vai abrir uma nova janela, nela você deve selecionar nos checkbox os arquivos (vamos dar uma olhada nessa janela antes de prosseguir)\n\n\n\n\n\n\n\n\n\n3 - Escreva uma mensagem informativa. Como este é o primeiro commit geralmente selecionamos todos os arquivos e escrevemos a mensagem First commit para indicar que é o primeiro commit deste repositório\n\n\n\n\n\n\n\n\n\nOBS A mensagem deve ser realmente informativa, o commit fica armazenado no seu repositório e aparecerá publicamente caso o repositório seja público.\n\n\n\n\n\n\n\n\n\nPronto, o que fizemos agora foi basicamente colocar nossos arquivos na stagging area (marcar as checking box) e prepará-los para a entrega com uma mensagem informativa, o commit. Agora precisamos enviar os arquivos para o repositório remoto (upstream)\n\n\n\nTemos um diretório functionando com o git, ligado ao github, com documentos dentro, mas, até agora ele apenas vive em nossos computadores. Chegou a hora de empurrar estes documentos para o diretório remoto, ou seja, aquele que clonamos lá no início. Para tanto vamos fazer um push\nO push nada mais é que empurrar os documentos para o repositório do github, chamado as vezes de origin/master e outras vezes origin/main, mas ambos querem dizer “um repositório remoto o qual o diretório que estou trabalhando está ligado”.\nSem mais delongas, para fazer um push precisamos apenas apertar o botão verde como mostrado na figura abaixo\n\n\n\n\n\n\n\n\n\nDuas coisas são importantes notar nesse momento. Primeiro o botão de push, que vai empurrar os arquivos para o repositório remoto (origin). Segundo, a mensagem destacada com a seta. Ela diz que o branch está a frente do origin/master por um commit. Traduzindo, nosso diretório local (branch), está uma versão a frente (pois modificamos coisas aqui) em relação ao nosso repositório remoto (origin/master). Ao empurrar (push) as modificações, essa mensagem desaparecerá, indicando que tanto branch quanto origin estão na mesma linha do tempo!",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Introdução ao controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula1_git_github_basics/index.html#o-clone",
+    "href": "aulas/aula1_git_github_basics/index.html#o-clone",
+    "title": "Introdução ao controle de versão",
+    "section": "",
+    "text": "Referência de velho\n\n\n\n\nPara que nosso repositório local esteja ligado ao nosso repositório remoto precisamos primeiro conectá-los. Fazemos isso ao clonar o repositório remoto em nossa máquina. Clonar (clone) nesse caso não é nada mais que criar uma cópia exata de um repositório remoto em sua máquina. A partir desse momento esses repositórios estarão conectados até que o Git os separe.\nPara clonar vá até o repositório remoto de interesse, e copie a chave https, como mostrado na figura a seguir:\n\n\n\n\n\n\n\n\n\nClique no botão de cópia e vamos para o RStudio. No RStudio vá em File e depois New Project. A partir daí siga as imagens abaixo:\n\n\n\n\n\n\n\nCopiando chave https\n\n\n\n\n\n\n\n\n\n\n\n\nAbrindo um novo projeto\n\n\n\n\n\n\n\n\n\n\n\n\nColando a chave https\n\n\n\n\nAo clicar em Create project o repositório remoto será imediatamente transferido para o seu computador. Uma pasta (o diretório local) será criado no local que você escolheu e, assim, RStudio, Git e Github estarão plenamente conectados. Tudo certo até aqui? Uma pausa para descanso com um vídeo.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Introdução ao controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula1_git_github_basics/index.html#pull-commits-e-push",
+    "href": "aulas/aula1_git_github_basics/index.html#pull-commits-e-push",
+    "title": "Introdução ao controle de versão",
+    "section": "",
+    "text": "Se você chegou até aqui sem erros isso quer dizer que Git e GitHub já estão integrados no RStudio. Portanto, qualquer coisa que fizermos nesta pasta está sendo observado a partir de agora pelo git. Para certirficar-se disso, habilite a visualização de arquivos ocultos no seu computador, você vai notar que na raiz desta pasta clonada existe uma pasta .git, como na figura a seguir\n\n\n\n\n\n\n\n\n\nSe você consegue ver esta pasta quer dizer que está tudo certo, e o git está observando (watch no jargão do versionamento) cada modificação e cada arquivo dentro desta pasta (a menos que você inclua o arquivo no .gitignore, mas isso é assunto para outro momento).\n\n\n\n\n\n\n\n\n\nAgora iremos executar funções que, até o fim deste curso, serão quase automáticas no nosso fluxo de trabalho com versionamento.\n\n\nO que é um commit?\nCommit, ou “revisão”, é uma mudança individual em um arquivo ou um conjunto de arquivos dentro da pasta observada pelo git. Os commits são como check-points para o nosso repositório. Uma analogia interessante para os commits foi apresentada na aula e está ilustrada aqui, na figura seguinte\nVamos pensar que nosso projeto é uma montanha, e estamos escalando ele. Nosso objetivo final é, obviamente, finalizar o projeto, chegando ao topo da montanha. A medida que progredimos,caso venhamos a cometer um erro, a queda pode ser grande. Desta maneira, utilizamos grampos onde ancoramos nossa corda a medida que a escalada progride. Em caso de erro, a queda será apenas até o grampo anterior onde a corda foi ancorada. Os commits servem como os clipes que ancoram a corda a medida que progredimos no projeto. Se cometermos um erro em algum arquivo, tudo certo, podemos voltar no commit anterior, ou anteriores, para tentar descobrir onde o erro foi cometido.\nDa mesma forma que na escalada, se utilizarmos clipes muito pertinhos uns dos outros vamos ficar lentos demais, e o progresso até o topo será comprometido, se fizermos muitos commits será difícil voltar em momentos específicos do projeto, visto que terão muitos commits para serem checados. Portanto, a regra é: faça commits com parcimonia, ou seja, nem muitos, nem poucos.\nVamos fazer uma modificação na nossa pasta. Podemos adicionar arquivos, já que ela está vazia. Para tanto vamos usar os arquivos do pacote de dados palmer penguins que estão nesse repositório. Lembre-se de ler os arquivos utilizando o {here} e utilizar o Rproject para abrir o diretório\n\ndata_penguins &lt;- read.csv(here::here(\"data\", \"data-penguins.csv\")) \n\nObs se quiserem usar seus próprios dados fiquem a vontade, o uso do palmerpenguins é apenas opcional e a título de procedimento didático.\nCaso estejam trabalhando com seus próprios dados, jogue os arquivos para dentro do diretório que clonamos. O próximo passo é fazer nosso primeiro commit.\n\n\n\n\n\n\n\n\n\n\n\n\nExistem duas formas de fazer versionamento usando o Git e Github via RStudio. Uma delas é a linha de comando, a outra é via uma interface visual, que nesse caso é o próprio RStudio. Vamos começar fazendo o versionamento via interface visual. A opção para isso é que ninguém se assuste num primeiro momento com a linha de comando, e que isso não seja um impeditivo para utilizar o versionamento no seu fluxo de trabalho. A maioria dos comandos básicos podem ser executados através desta interface gráfica que chamamos de Git Client\nRepare que seu RStudio agora tem algumas coisas novas. Especificamente, veja que agora ele tem uma aba chamada Git, como ilustrado na figura abaixo\n\n\n\n\n\n\n\n\n\nIsso indica que o git está funcionando no seu diretório, e agora podemos fazer o versionamento deste diretório local e sincronizá-lo com o repositório remoto.\nTudo e qualquer coisa que for adicionado ou modificado na sua pasta vai aparecer na janela abaixo da aba git. Como mostrado na figura abaixo\n\n\n\n\n\n\n\n\n\nComo eu mencionei na aula teórica e aqui acima, o commit é como um track changes do word, mas melhor. Precisamos fazer um track change manual, indicando o que foi modificado, isso é o nosso commit. Para realizar um commit via a interface do RStudio você precisa:\n1 - Clicar no botão commit pending changes (ou em qualquer botão naquela aba), como mostrado abaixo\n\n\n\n\n\n\n\n\n\n2 - Isso vai abrir uma nova janela, nela você deve selecionar nos checkbox os arquivos (vamos dar uma olhada nessa janela antes de prosseguir)\n\n\n\n\n\n\n\n\n\n3 - Escreva uma mensagem informativa. Como este é o primeiro commit geralmente selecionamos todos os arquivos e escrevemos a mensagem First commit para indicar que é o primeiro commit deste repositório\n\n\n\n\n\n\n\n\n\nOBS A mensagem deve ser realmente informativa, o commit fica armazenado no seu repositório e aparecerá publicamente caso o repositório seja público.\n\n\n\n\n\n\n\n\n\nPronto, o que fizemos agora foi basicamente colocar nossos arquivos na stagging area (marcar as checking box) e prepará-los para a entrega com uma mensagem informativa, o commit. Agora precisamos enviar os arquivos para o repositório remoto (upstream)\n\n\n\nTemos um diretório functionando com o git, ligado ao github, com documentos dentro, mas, até agora ele apenas vive em nossos computadores. Chegou a hora de empurrar estes documentos para o diretório remoto, ou seja, aquele que clonamos lá no início. Para tanto vamos fazer um push\nO push nada mais é que empurrar os documentos para o repositório do github, chamado as vezes de origin/master e outras vezes origin/main, mas ambos querem dizer “um repositório remoto o qual o diretório que estou trabalhando está ligado”.\nSem mais delongas, para fazer um push precisamos apenas apertar o botão verde como mostrado na figura abaixo\n\n\n\n\n\n\n\n\n\nDuas coisas são importantes notar nesse momento. Primeiro o botão de push, que vai empurrar os arquivos para o repositório remoto (origin). Segundo, a mensagem destacada com a seta. Ela diz que o branch está a frente do origin/master por um commit. Traduzindo, nosso diretório local (branch), está uma versão a frente (pois modificamos coisas aqui) em relação ao nosso repositório remoto (origin/master). Ao empurrar (push) as modificações, essa mensagem desaparecerá, indicando que tanto branch quanto origin estão na mesma linha do tempo!",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Introdução ao controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#olá-quem-somos",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#olá-quem-somos",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Olá! Quem somos",
+    "text": "Olá! Quem somos\nGabriel"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#o-início",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#o-início",
+    "title": "Ferramentas de ciência aberta",
+    "section": "O início",
+    "text": "O início"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Reprodutibilidade",
+    "text": "Reprodutibilidade"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade-por-que",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade-por-que",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Reprodutibilidade: Por que?",
+    "text": "Reprodutibilidade: Por que?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“O artigo científico é o Tinder da Ciência. Não é exatamente mentira, mas somos espertos o suficiente para não casar com alguém só pelo seu perfil aparente”"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade-a-importância-do-processo",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade-a-importância-do-processo",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Reprodutibilidade: a importância do processo",
+    "text": "Reprodutibilidade: a importância do processo"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade-a-importância-do-processo-1",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade-a-importância-do-processo-1",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Reprodutibilidade: a importância do processo",
+    "text": "Reprodutibilidade: a importância do processo\n\n\n\n\n\n\n\n\n\nProcesso é tão importante quanto o resultado\nA qualidade do resultado está ligada ao processo\nMeios justificam os fins (meios são tão importantes quanto o fim)"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade-por-que-1",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#reprodutibilidade-por-que-1",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Reprodutibilidade: Por que?",
+    "text": "Reprodutibilidade: Por que?"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#vivemos-uma-crise-de-reprodutibilidade-sim-por-que",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#vivemos-uma-crise-de-reprodutibilidade-sim-por-que",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Vivemos uma crise de reprodutibilidade? Sim! Por que?",
+    "text": "Vivemos uma crise de reprodutibilidade? Sim! Por que?"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#como-resolver",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#como-resolver",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Como resolver?",
+    "text": "Como resolver?\n\n“Reproducibility is like brushing your teeth. Once you learn it, it becomes a habit”"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#como-resolver-1",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#como-resolver-1",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Como resolver?",
+    "text": "Como resolver?\n ## Como resolver? {.center .middle background-image=“figuras/Clouds.jpg” background-size=“cover”}"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#como-resolver-2",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#como-resolver-2",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Como resolver?",
+    "text": "Como resolver?"
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/slides.html#como-resolver-3",
+    "href": "aulas/aula0_intro_reprodutibilidade/slides.html#como-resolver-3",
+    "title": "Ferramentas de ciência aberta",
+    "section": "Como resolver?",
+    "text": "Como resolver?"
+  },
+  {
     "objectID": "links.html",
     "href": "links.html",
     "title": "Links para materiais",
@@ -48,7 +168,7 @@
     "href": "about.html",
     "title": "Sobre o curso",
     "section": "",
-    "text": "O conteúdo nesse sítio tem como objetivo servir como material de apoio para a disciplina **Tópicos Especiais - Métodos e técnicas em ecologia, conservação e manejo da vida silvestre - Diversidade Funcional e filogenética de comunidades, parte da grade de disciplinas oferecidas no PPG Ecologia, Conservação e Manejo da Vida Silvestre da Universidade Federal de Minas Gerais, ministrada por mim, Gabriel Nakamura e pelo Rafa Leitão.\nEspecificamente, aqui você irá encontrar os materiais para a segunda semana da disciplina, onde, apesar do nome oficial ser Diversidade Filogenética, iremos abordar menos sobre isso, e mais sobre o que gera, de onde vem, e como podemos utilizar alguns métodos filogenéticos para responder questões em ecologia e macroevolução. Este curso não tem como intuito apresentar uma lista exaustiva de métricas e métodos, mas sim fornecer as bases teóricas e metodológicas para que os estudantes possam eles mesmos chegarem nas melhores alternativas para representar e responder suas questões.\nPara uma visão geral dos temas, horários e conteúdos veja esta página.",
+    "text": "Olá!\nObrigado pelo interesse em participar da disciplina “Boas Práticas e Ferramentas da Ciência Aberta na Ecologia”. Nesta disciplina serão abordados conceitos teóricos, tendências e ferramentas computacionais para desenvolver pesquisas que vão ao encontro dos princípios e movimento da ciência aberta.\nEste sítio servirá como um guia para nossas aulas. Nele vocês encontrarão os materiais necessários bem como os scripts que utilizaremos durante as aulas para as atividades práticas. Ah! O site continuará funcionando após o término da disciplina, portanto, sempre que tiver alguma dúvida é só voltar aqui e revisitar o que vimos nas aulas.\nClique aqui para uma visão completa do cronograma",
     "crumbs": [
       "Informações sobre o curso",
       "Apresentação"
@@ -71,6 +191,364 @@
     "title": "Sobre o curso",
     "section": "Recursos e referências",
     "text": "Recursos e referências\nLista com alguns recursos que podem ser utilizados na disciplina de ecologia filogenética ou macroecologia filogenética. - Livro do Luke Harmon sobre método comparativo - site utilizado como modelo para de layout para site da disciplina - Livro do Nate Swenson - Phylogenetic Ecology como base para organização do conteúdo, principalmente a sequência e os eixos apresentados - Cassey Dunn book - very very good source of information on phylogenies and phylogenetic inference - Special issue in Phil Transactions B on phylogenetic models - Figure tree by Darwin in On the origin of species",
+    "crumbs": [
+      "Informações sobre o curso",
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "aulas/glossario/index.html",
+    "href": "aulas/glossario/index.html",
+    "title": "Glossário do versionamento",
+    "section": "",
+    "text": "Uma das maiores dificuldades quando começamos utilizar versionamento em nossos trabalhos é a quantidade de termos técnicos utilizados nessa área. Pull, push, commit, pull request, merge, fast forward, main/origin e por aí vai.\nPor isso, o objetivo dessa seção é compilar um conjunto de termos e seus significados para facilitar o entendimento dos procedimentos de versionamento. Muitos dos significados são retirados do ótimo artigo Pedro Braga na Methods in Ecology and Evolution (Braga et al. (2023)). Nessa seção você pode encontrar os principais termos utilizados em trabalhos que envolvem versionamento. Para sugestões, correções ou adições de termos abra um Issue ou submeta um pull request. Os termos estão colocados em inglês pois é a maneira mais comum que vocês irão encontrar na documentação do Git e do GitHub.\n\n\n\n\n\n\nGlossário\n\n\n\n\n\n\nRepository: Um conjunto de arquivos que é monitorado pelo Git (nossa ferramenta de versionamento). Os repositórios podem ser tanto remotos quanto locais, dependendo de onde eles estão (respectivamente, em um serviço de hospedagem remoto, como o GitHub ou/e no seu computador)\nBranch: Representa o caminho de desenvolvimento do projeto. Repositórios podem ter um único, geralmente denominado main ou master, ou múltiplos branches. Esses multiplos branches podem representar caminhos divergentes de um dado projeto (por exemplo, uma modificação em análises, um colaborador que está testando uma mudança em algum aspecto do projeto, etc.). O uso prático dos branches está ilustrado em Trabalho colaborativo\nCommit: Função do Git que possibilita registrar “fotografias” que representam diferentes momentos do desenvolvimento do projeto. No versionamento com o Git os commits possibilitam a identificação e o rastreamento das modificações realizadas no repositório. O uso prático do commit está ilustrado em ABC do versionamento\nPush e Pull:\nPull request:\nMerge:\nRelease:\nHead: Termo utilizado para representar qual o local atual que você se encontra no histórico de desenvolvimento do seu repositório.\n\n\n\n\n\nGuia resumido de funções do git\nAqui você pode encontrar uma pequena cola com algumas das principais funções do git. Este material foi produzido por Julia Evans\n\n\n\n\n\ncheat-sheet-git\n\n\n\n\n\n\n\n\n\n\n\nReferences\n\nBraga, Pedro Henrique Pereira, Katherine Hébert, Emma J. Hudgins, Eric R. Scott, Brandon P. M. Edwards, Luna L. Sánchez Reyes, Matthew J. Grainger, et al. 2023. “Not Just for Programmers: How GitHub Can Accelerate Collaborative and Reproducible Research in Ecology and Evolution.” Methods in Ecology and Evolution n/a (n/a). https://doi.org/10.1111/2041-210X.14108.",
+    "crumbs": [
+      "Aulas",
+      "Versionamento",
+      "Glossário do versionamento"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html",
+    "title": "Ferramentas para controle de versão",
+    "section": "",
+    "text": "Nesta primeira seção irei apresentar as principais ferramentas que utilizaremos para nos ajudar na organização de dados, scripts, análises e projetos científicos em geral. Estas ferramentas irão auxiliar desde a organização local de seus dados até a disponibilização destes dados em plataformas de acesso aberto. Várias delas já devem ser velhas conhecidas por vocês, por exemplo, o RStudio, então dispensam maiores apresentações. Por isso, grande parte deste documento vai tratar de uma ferramenta até bem conhecida pelo nome, mas que pra muita gente pode parecer coisa de outro mundo: o Git. Vocês verão que algumas das funções que ele possibilita realizar nós já fazemos no dia-a-dia através de outros aplicativos, porém, com mais eficiência e controle das ações.\nGrande parte das práticas que realizaremos serão voltadas para códigos e pacotes em linguagem R, porém vale destacar que o versionamento utilizando o Git pode ser feito em projetos que utilizem qualquer outra linguagem de programação a restrição para o R é uma escolha decorrente da maior familiaridade desta linguagem por parte dos elaboradores desta disciplina e também por se tratar da linguagem mais comum utilizada em Ecologia e Evolução para programação e análise de dados.\n\n\nPara executar os códigos desta seção é importante ter os seguintes pacotes instalados: usethis, devtools e gitcreds\nVocê pode realizar a instalação utilizando a seguinte linha de código:\n\nlibs &lt;- c(\"usethis\", \"devtoos\", \"gitcreds\")\nif (!requireNamespace(libs, quietly = TRUE)){\n    install.packages(libs)\n  }\n\nCaso você não tenha os pacotes acima citados a instalação será realizada. Caso já tenha em seu computador, nada irá acontecer.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html#pacotes-necessários",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html#pacotes-necessários",
+    "title": "Ferramentas para controle de versão",
+    "section": "",
+    "text": "Para executar os códigos desta seção é importante ter os seguintes pacotes instalados: usethis, devtools e gitcreds\nVocê pode realizar a instalação utilizando a seguinte linha de código:\n\nlibs &lt;- c(\"usethis\", \"devtoos\", \"gitcreds\")\nif (!requireNamespace(libs, quietly = TRUE)){\n    install.packages(libs)\n  }\n\nCaso você não tenha os pacotes acima citados a instalação será realizada. Caso já tenha em seu computador, nada irá acontecer.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html#git-e-github",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html#git-e-github",
+    "title": "Ferramentas para controle de versão",
+    "section": "Git e GitHub",
+    "text": "Git e GitHub\nTer a possibilidade de controlar as versões dos documentos já é bom, imagine, além disso, ter um local remoto onde tudo isso fica guardado. Ou seja, se seu computador quebrar, for roubado, pifar, ou se você troca-lo, tudo estará seguro em um lugar chamado GitHub.\nPortanto, aqui vale uma nota importante, Git e GitHub são coisas distintas. O GitHub é o GoogleDrive (ou o OneDrive) dos códigos. Ele tem como função armazenar remotamente todos os trabalhos que são feitos localmente (na sua máquina) e que estão sendo monitorados pelo Git, mas com muito mais potencialidades e controle de armazenamento que as ferramentas mencionadas. Por exemplo, imagine guardar um site inteiro no Google Drive, ou um pacote estatístico que você escreveu, e ainda disponibilizar essas coisas para outras pessoas… parece complicado se usarmos as ferramentas comerciais mais comuns, mas com o GitHub tudo isso se torna possível ser realizado com facilidade",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html#git-e-git-client",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html#git-e-git-client",
+    "title": "Ferramentas para controle de versão",
+    "section": "Git e Git client",
+    "text": "Git e Git client\nTemos uma ferramenta que possibilita o versionamento (o Git), outra que possibilita o armazenamento, colaboração, compartilhamento (GitHub), mas como controlamos essas ferramentas? É aí que entra o que chamamos de Git client.\nUma simples analogia para entender a diferença entre um Git client e o Git é a pensar na diferença entre R e RStudio. O R é a ferramenta onde os processos são realizados, o RStudio é uma interface específica e amigável para o uso do R. Da mesma forma o Git é a ferramenta que realiza o controle de versão, já o Git client é a interface específica para que o usuário possa interagir de maneira mais amigável com o Git e GitHub. Existem vários Git clients que podemos utilizar para realizar essa interação, por exemplo, o GitKraken e GitLab. Cada um tem suas vantagens e desvantagens.\nNeste curso usaremos um Git client que é um velho conhecido nosso, o RStudio. Faremos isso pois o RStudio (agora chamado Posit, mas vamos nos referenciar a ele através do nome antigo) é a interface mais comum utilizada nos estudos de ecologia e evolução, além de apresentar uma grande quantidade de materiais disponíveis na internet e também por ser aquela que o instrutor que vos fala tem mais familiaridade. Outras opções interessantes que podem ser utilizadas como Client são o VSCode, mais recentemente o Positron, mas vocês irão também irão explorar o uso da linha de comando do terminal (CLI).",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html#integrando-git-github-e-rstudio",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html#integrando-git-github-e-rstudio",
+    "title": "Ferramentas para controle de versão",
+    "section": "Integrando Git, GitHub e RStudio",
+    "text": "Integrando Git, GitHub e RStudio\nAgora que conhecemos as ferramentas, imagine se conseguíssemos colocar elas em um só lugar. Imagine um sistema que integra o seu programa favorito de análises estatísticas, o seu programa favorito de controle de versões e também o seu repositório remoto favorito. Pois é disso que se trata a integração do Git com o GitHub e RStudio. Tudo (quase tudo) pode ser feito no Git através do RStudio. Portanto, nas próximas seções irei apresentar como podemos integrar o controle de versão (Git) com o repositório remoto (GitHub) e o RStudio.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html#instalação-do-git-no-windows",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html#instalação-do-git-no-windows",
+    "title": "Ferramentas para controle de versão",
+    "section": "Instalação do Git no Windows",
+    "text": "Instalação do Git no Windows\nInstale o Git acessando aqui e siga as informações do auxiliar de instalação que foi baixado.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html#instação-do-git-no-mac-os",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html#instação-do-git-no-mac-os",
+    "title": "Ferramentas para controle de versão",
+    "section": "Instação do Git no Mac OS",
+    "text": "Instação do Git no Mac OS\nInstale o Git no seu Mac baixando o Xcode command line tools caso você ainda não o tenha. Esta aplicação já vem com o git. Aceite as configurações e clique em instalar\nEm seguida configure o git usando a linha de comando seguinte no seu terminal:\n\ngit --version\ngit config --global user.name \"Your name here\"\ngit config --global user.email \"your_email@example.com\"",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html#instalação-do-git-no-linux",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html#instalação-do-git-no-linux",
+    "title": "Ferramentas para controle de versão",
+    "section": "Instalação do Git no Linux",
+    "text": "Instalação do Git no Linux\nDigite a seguinte linha de comando caso você tenha Ubuntu ou Debian Linux\n\nsudo apt-get install git\n\nSe tem Fedora ou HatLinux use:\n\nsudo yum install git\n\nAlgumas coisas podem ser diferentes dependendo do seu sistema operacional e versão do Linux, caso se depare com algum problema tente abrir um Issue no repositório desta apostila no GitHub e tentaremos resolver :)",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html#utilizando-o-pacote-usethis",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html#utilizando-o-pacote-usethis",
+    "title": "Ferramentas para controle de versão",
+    "section": "Utilizando o pacote usethis",
+    "text": "Utilizando o pacote usethis\nApós a instalação do Git devemos configur o GitHub no nosso computador. Para configurar o GitHub, ou seja, para que o Git e GitHub saiba quem está usando, vamos utilizar a configuração com auxílio do ótimo pacote usethis. Portanto, abra o RStudio e digite:\n\nlibrary(usethis)\nuse_git_config(user.name = \"SeuNomeDeUsuario\", user.email = \"seuMail@example.br\")\n\nLembre de substituir os campos que aparecerão no console do seu R com suas informações. “SeuNomeDeUsuario” é o nome que você cadastrou no GitHub\n\n\n\n\n\nNome do usuário destacado em vermelho",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/aula0_intro_reprodutibilidade/index.html#utilizando-o-pacote-gitcreds---mais-recomendada",
+    "href": "aulas/aula0_intro_reprodutibilidade/index.html#utilizando-o-pacote-gitcreds---mais-recomendada",
+    "title": "Ferramentas para controle de versão",
+    "section": "Utilizando o pacote gitcreds - Mais recomendada",
+    "text": "Utilizando o pacote gitcreds - Mais recomendada\nApesar de estarmos falando de ciência aberta, o seu perfil no GitHub é pessoal, portanto é importante que haja uma forma de autenticação onde o GitHub saiba que você é o dono do perfil. Isso geralmente é feito através do uso de senhas, porém senhas nem sempre são seguras (ok, provavelmente ninguém vai querer invadir nosso GitHub para tomar informações sobre uma função que calcula a dimensionalidade da biodiversidade, mas outras coisas são desenvolvidas e hospedadas no GitHub), e por isso a forma padrão de autenticação utilizada pelo GitHub é o chamado PAT (Personal Access Token). Segundo o próprio GitHub um PAT é:\n\n“Personal access tokens are an alternative to using passwords for authentication to GitHub when using the GitHub API or the command line.”\n\nO PAT nada mais é que uma “senha” gerada pelo próprio github e que deve ser renovada com certa periodicidade. O GitHub não permite mais autenticações via senha, apenas usando o PAT. Portanto, o último passo para integrar o R, RStudio, Git e GitHub é informar o PAT. Precisaremos fazer isso apenas uma vez, e repetir apenas quando o PAT expirar. Vamos começar gerando o PAT. Para informações mais detalhadas sobre o PAT você pode acessar esta página.\nPara configurar o PAT vamos usar primeiro o pacote usethis e depois vamos utilizar as funcionalidades do pacote gitcreds.Digite a linha de código no seu console do R:\n\nlibrary(usethis)\ncreate_github_token()\n\nIsso abrirá uma guia no seu navegador para que você gere um token, tal como mostrado na imagem abaixo\n\n\n\n\n\nExemplo da página do GitHub para gerar um token\n\n\n\n\nVocê verá inúmeras opções de acesso. As caixinhas que vamos escolher vai depender do grau de controle que você deseja ter para usar o GitHub via Rstudio.\nApós gerado, guarde esse token com carinho, pois ele vai ser sua nova senha de entrada para o GitHub via RStudio, quando for requerido. Para armazenar senhas e dados eu sugiro o programa LastPass.\nPróximo passo é registar esse token gerado em nosso computador. Para tanto, faça o seguinte:\n\nlibrary(gitcreds)\ngitcreds::gitcreds_set()\n\nNo console aparecerá a mensagem para digitar o token, copie o token e cole direto no navegador, pressione enter e pronto, seu RStudio está autenticado e agora está devidamente conectado com o repositório remoto. Estamos pronto para o nosso primeiro commit!!!!",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Ferramentas para controle de versão"
+    ]
+  },
+  {
+    "objectID": "aulas/ciencia_aberta/index.html",
+    "href": "aulas/ciencia_aberta/index.html",
+    "title": "Ciência Aberta",
+    "section": "",
+    "text": "O que é ciência aberta?\nNesta primeira aula, navegaremos pelas fascinantes paisagens da ciência aberta, avaliando sua origem, histórico e múltiplos significados.\nA ciência aberta é um movimento dentro da ciência que busca a abertura do processo de conhecimento científico, de forma que TODAS as atividades científicas, e não só o resultado final, sejam praticadas de forma transparente, colaborativa, e que seus resultados sejam confiáveis e re-utilizáveis, tanto para outros cientistas quanto para a sociedade em geral.\nA grosso modo, podemos dizer que a ciência aberta é um grande guarda-chuva formado por várias iniciativas de reestruturação da forma de fazer ciência, e portanto, recebe influência de diferentes agentes como os próprios cientistas, as agências de fomento/financiadores, governos, e cidadãos.\nNesta aula, vamos discutir primeiro o que não é ciência aberta - má conduta, fraudes, plágio, pesquisa irreprodutível, erros não corrigidos - e a importância da integridade e boas práticas científicas.\nVamos refletir um pouco em como a má ciência pode estar sendo selecionada no ambiente acadêmico (Ioannidis (2012), Smaldino and McElreath (2016)) devido a incentivos institucionais destorcidos voltados para quantidade - “publish-A-LOT-or-perish”, o prestígio manipulado por revistas e as métricas de qualidade/quantidade usadas para avaliação de revistas, pesquisadores e instituições.\nDiscutiremos as principais dimensões da ciência aberta, taxonomias e esquemas que nos ajudem a entender um pouco melhor os principais elementos do movimento da ciência aberta.\nAbordaremos algumas políticas de ciência aberta, focada em iniciativas nacionais e a reflexão sobre os vários discursos de ciência aberta dentro destas políticas nacionais, internacionais e supra-nacionais.\n\n\nRazões para a Ciência Aberta\nAbaixo, 10 razões para praticarmos e nos importamos com uma ciência mais aberta (retirado do curso da FioCruz sobre ciência aberta, recomendo fazer!):\n\nPreserva, valoriza e partilha a produção científica.\nPromove o Acesso Aberto aos dados e publicações científicas.\nProtege e valoriza a propriedade intelectual.\nPromove a eficiência do processo científico.\nAumenta a visibilidade e reconhecimento dos investigadores e das instituições.\nAmplifica o impacto da investigação, estimula a criatividade e a inovação.\nPromove a responsabilidade social científica e a apropriação social do conhecimento.\nPromove a transparência e o conhecimento do processo científico.\nEnvolve a sociedade no processo de (co)criação e fruição do conhecimento.\nDemocratiza o acesso ao conhecimento científico e potencia o desenvolvimento.\n\n\n\nLeituras recomendadas\n\nAlbornoz D, Huang M, Martin I, Mateus M, Touré A, Chan L (2018) Framing Power: Tracing Key Discourses in Open Science Policies. ELectronic PUBlishing. https://doi.org/10.4000/proceedings.elpub.2018.23\nBezjak S, Clyburne-Sherin A, Conzett P, et al (2018) Open Science Training Handbook. https://doi.org/10.5281/zenodo.1212496\nBrainard J (2023) Fake scientific papers are alarmingly common Science\nBrainard J, You J (2018) What a massive database of retracted papers reveals about science publishing’s ‘death penalty’ Science\nCosta MPD, Leite FCL (2019) Panorama preliminar do desenvolvimento da ciência aberta. https://doi.org/10.26512/9788564593787\nFAPESP (2014) Código de Boas Práticas Científicas\nIoannidis JPA (2012) Why Science Is Not Necessarily Self-Correcting. Perspectives on Psychological Science 7:645–654 https://doi.org/10.1177/1745691612464056\nPowers SM, Hampton SE (2019) Open science, reproducibility, and transparency in ecology. Ecological Applications 29:e01822. https://doi.org/10.1002/eap.1822\nSantos-D’amorim K, Correia AEGC, Miranda MKF de O, Santa-Cruz P (2021) Reasons and implications of retracted articles in Brazil. Transinformação 33:e210001. https://doi.org/10.1590/2318-0889202133e210001\nSmaldino PE, McElreath R (2016) The natural selection of bad science. Royal Society Open Science 3:160384. https://doi.org/10.1098/rsos.160384\nUNESCO (2021) Recomendação da UNESCO sobre Ciência Aberta. https://doi.org/10.54677/XFFX3334\nUSP (2023) Guia de Boas Práticas Científicas.\nDeclaração USP de Apoio à Ciência Aberta – Ciência Aberta USP.\nInovação e governo aberto na ciência - Monitoramento e Execução. In: Controladoria-Geral da União. https://www.gov.br/cgu/pt-br/governo-aberto/a-ogp/planos-de-acao/4o-plano-de-acao-brasileiro/compromisso-3-docs/inovacao-e-governo-aberto-na-ciencia-monitoramento-e-execucao. Accessed 4 Aug 2023\nOpen Government Declaration. In: Open Government Partnership. https://www.opengovpartnership.org/process/joining-ogp/open-government-declaration/\nTransparência em Ciência: novos mecanismos de avaliação para o avanço da Ciência Aberta - Monitoramento e Execução. In: Controladoria-Geral da União. &lt;https://www.gov.br/cgu/pt-br/governo-aberto/a-ogp/planos-de-acao/5o-plano-de-acao-brasileiro/compromisso-8-transparencia-em-ciencia-novos-mecanismos-de-avaliacao-para-o-avanco-da-cie ncia-aberta/meio-ambiente-e-floresta-monitoramento-e-execucao.&gt;\nO Oscar do microscopista: A ciência precisa superar o conceito de autoria para se adaptar ao século XXI\nCredibilidade científica em debate\n\n\n\nSites de interesse\n\nSociety for Open, Reliable and Transparent Ecology and Evolutionary Biology. In: SORTEE. https://www.sortee.org/.\nIniciativa Brasileira de Reprodutibilidade. https://www.reprodutibilidade.bio.br.\nResearch Data Alliance | RDA. https://www.rd-alliance.org/about-rda.\nAIMOS. https://aimos.community.\nOpenAIRE. https://www.openaire.eu/.\nCenter for Open Science. https://www.cos.io.\nLA Referencia.https://www.lareferencia.info/en/\nNovo curso da Fiocruz trata da gestão e compartilhamento de dados abertos de pesquisa. In: Portal de Periódicos - Fiocruz.https://periodicos.fiocruz.br/node/1063\nO que é Ciência Aberta? - 1º Oferta. In: Campus Virtual Fiocruz.&lt; https://campusvirtual.fiocruz.br/portal/?q=node/38010&gt;\nOpen Science @ FAPESP. https://fapesp.br/openscience/\nRede Brasileira De Reprodutibilidade. https://www.reprodutibilidade.org\nReproducibiliTea. https://reproducibilitea.org/\nSciELO - Brazil. https://www.scielo.br/\nNEPER: Núcleo de Estratégias em Planejamento Experimental e Reprodutibilidade. ICB-USP https://sites.usp.br/neper/\n\n\n\n\n\n\n\n\nReferences\n\nIoannidis, John P. A. 2012. “Why Science Is Not Necessarily Self-Correcting.” Perspectives on Psychological Science 7 (6): 645–54. https://doi.org/10.1177/1745691612464056.\n\n\nSmaldino, Paul E., and Richard McElreath. 2016. “The Natural Selection of Bad Science.” Royal Society Open Science 3 (9): 160384. https://doi.org/10.1098/rsos.160384.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Introdução a Ciência Aberta"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html",
+    "href": "aulas/dados_abertos/index.html",
+    "title": "Dados abertos",
+    "section": "",
+    "text": "Dados são a base de quase toda pesquisa ecológica e podem ser de natureza, formatos e tamanhos muito diferentes: tabelas, questionários, texto, imagem, áudio, entrevista, simulações, etc…\nDados são produto da pesquisa, assim como teses e artigos. Portanto, devemos nos orgulhar dos dados que produzimos/coletamos/simulamos/organizamos dentro dos nossos projetos de pequisa!\nNessa aula vamos navegar no universo dos dados ecológicos, discutindo um pouco sobre:",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#metadados",
+    "href": "aulas/dados_abertos/index.html#metadados",
+    "title": "Dados abertos",
+    "section": "Metadados",
+    "text": "Metadados\nOs metadados consistem em explicações sobre a estrutura de dados. Por exemplo, o significado dos códigos ou abreviações presentes em uma data tabela, do que se trata a informação presente nas linhas e nas colunas, o que uma dada função faz. Reportar precisamente o que cada arquivo contém é de extrema importância para garantir com que outras pessoas, ou mesmo o você do futuro saiba o que foi/está sendo feito no projeto científico.\nOs metadados não servem apenas para reportar o significado das variáveis em tabelas, isso por si só já seria um motivo relevante para termos metadados, mas também para facilitar a integração de bases diferentes de dados. Imagine só ter que navegar manualmente nos metadados de estudos de diferentes grupos, com dados coletados com diferentes métodos, tabelas que adotam diferentes códigos, com distantas escalas espaciais e temporais. Até seria possível, mas talvez a taxa com que perdemos espécies e habitats seja mais rápida (e está sendo) que nossa capacidade de síntese de dados. Portanto, os metadados não servem apenas para o nosso interesse próprio de organização, mas ao utilizarmos os metadados estamos contribuindo para um avanço mais rápido do processo científico.\nDada tais importâncias citadas acima, os metadados ideais devem seguir um esquema onde podem ser lidos por humanos (human-readable) e por computadores (machine-readable). Desta forma, nesta seção vamos praticar a elaboração de metadados que seguem essa característica, e que o formato foi pensado para satisfazer as especificidades dos dados ecológicos. Para tanto vamos utilizar o pacote EML.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#instalação",
+    "href": "aulas/dados_abertos/index.html#instalação",
+    "title": "Dados abertos",
+    "section": "Instalação",
+    "text": "Instalação\nPara instalar o pacote EML faça o seguinte:\n\ninstall.packages(\"EML\")\n\nlibrary(EML)\n\nVamos utilizar um conjunto de dados contidos no próprio pacote EML para facilitar a compreensão dos passos necessários para construir um EML completo",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#construindo-um-eml---harvard-forest-data",
+    "href": "aulas/dados_abertos/index.html#construindo-um-eml---harvard-forest-data",
+    "title": "Dados abertos",
+    "section": "Construindo um EML - Harvard Forest Data",
+    "text": "Construindo um EML - Harvard Forest Data\n\nConstruindo os Atributos\nOs atributos são as descrições para as variáveis contidas na nossa tabela. Aquela aba contendo as informações das variáveis, pois então, esta seria os atributos da sua tabela de dados. Então, primeiro precisamos de uma tabela de atributos que define o significado geral de cada variável em nossa tabela de dados. Esta tabela pode ser gerada aqui no R direto, como no exemplo abaixo, mas pode ser importada a partir de uma tabela .csv. A tabela segue o formato a seguir:\n\nattributes &lt;-\ntibble::tribble(\n~attributeName, ~attributeDefinition,                                                 ~formatString, ~definition,        ~unit,   ~numberType,\n  \"run.num\",    \"which run number (=block). Range: 1 - 6. (integer)\",                 NA,            \"which run number\", NA,       NA,\n  \"year\",       \"year, 2012\",                                                         \"YYYY\",        NA,                 NA,       NA,\n  \"day\",        \"Julian day. Range: 170 - 209.\",                                      \"DDD\",         NA,                 NA,       NA,\n  \"hour.min\",   \"hour and minute of observation. Range 1 - 2400 (integer)\",           \"hhmm\",        NA,                 NA,       NA,\n  \"i.flag\",     \"is variable Real, Interpolated or Bad (character/factor)\",           NA,            NA,                 NA,       NA,\n  \"variable\",   \"what variable being measured in what treatment (character/factor).\", NA,            NA,                 NA,       NA,\n  \"value.i\",    \"value of measured variable for run.num on year/day/hour.min.\",       NA,            NA,                 NA,       NA,\n  \"length\",    \"length of the species in meters (dummy example of numeric data)\",     NA,            NA,                 \"meter\",  \"real\")\n\nDê uma olhada na tabela de atributos (pode ser feito usano a função View ou abrindo no Excel). A maioria dos dados seguem este formato geral.\nA seguir precisamos descrever os atributos que apresentam níveis. Por exemplo o atributo chamado variable apresenta oito níveis. A estratégia seguida aqui foi criar vetores com os códigos usados para cada nível dos atributos e uma pequena explicação.\n\ni.flag &lt;- c(R = \"real\",\n            I = \"interpolated\",\n            B = \"bad\")\nvariable &lt;- c(\n  control  = \"no prey added\",\n  low      = \"0.125 mg prey added ml-1 d-1\",\n  med.low  = \"0,25 mg prey added ml-1 d-1\",\n  med.high = \"0.5 mg prey added ml-1 d-1\",\n  high     = \"1.0 mg prey added ml-1 d-1\",\n  air.temp = \"air temperature measured just above all plants (1 thermocouple)\",\n  water.temp = \"water temperature measured within each pitcher\",\n  par       = \"photosynthetic active radiation (PAR) measured just above all plants (1 sensor)\"\n)\n\nvalue.i &lt;- c(\n  control  = \"% dissolved oxygen\",\n  low      = \"% dissolved oxygen\",\n  med.low  = \"% dissolved oxygen\",\n  med.high = \"% dissolved oxygen\",\n  high     = \"% dissolved oxygen\",\n  air.temp = \"degrees C\",\n  water.temp = \"degrees C\",\n  par      = \"micromoles m-1 s-1\"\n)\n\n## Write these into the data.frame format\nfactors &lt;- rbind(\ndata.frame(\n  attributeName = \"i.flag\",\n  code = names(i.flag),\n  definition = unname(i.flag)\n),\ndata.frame(\n  attributeName = \"variable\",\n  code = names(variable),\n  definition = unname(variable)\n),\ndata.frame(\n  attributeName = \"value.i\",\n  code = names(value.i),\n  definition = unname(value.i)\n)\n)\n\nApós especificadas as características das variáveis categóricas (as contínuas já estão especificadas na tabela geral de atributos attributes), usamos a função set_attributes para criar a lista de atributos geral dos dados, onde devemos especificar o tipo de atributo que estamos inserindo (se caracter, se data, se fator etc..)\n\nattributeList &lt;- set_attributes(attributes, factors, col_classes = c(\"character\", \"Date\", \"Date\", \"Date\", \"factor\", \"factor\", \"factor\", \"numeric\"))\n\n\n\nConstruindo as características físicas do dado\nAqui vamos especificar as características físicas do próprio arquivo de dados que utilizamos, ou seja, o formato, o tipo de compressão do arquivo, o separador etc. Resumindo, aqui é especificado a característica do arquivo. Isso é feito facilmente com a função set_physical. Se estivermos utilizando um arquivo .csv a função já extrai automaticamente a maior parte das características relevantes do arquivo de dados.\n\nphysical &lt;- set_physical(here::here(\"data\", \"hf205-01-TPexp1-EML-Exemple.csv\"))\n\n\n\nJuntando Atributos e Características físicas\nCom o objeto de atributos e o objeto de características físicas temos o essencial para descrever o nosso conjunto de dados. Agora vamos juntar ambos com mais algumas informações em uma única lista e denominar isso como sendo o nosso dataTable\n\ndataTable &lt;- list(\n                 entityName = \"hf205-01-TPexp1.csv\",\n                 entityDescription = \"tipping point experiment 1\",\n                 physical = physical,\n                 attributeList = attributeList)\n\n\n\nCaracterísticas adicionais - extensão geográfica, métodos e outros\n\ngeographicDescription &lt;- \"Harvard Forest Greenhouse, Tom Swamp Tract (Harvard Forest)\"\n\n\ncoverage &lt;- \n  set_coverage(begin = '2012-06-01', end = '2013-12-31',\n               sci_names = \"Sarracenia purpurea\",\n               geographicDescription = geographicDescription,\n               west = -122.44, east = -117.15, \n               north = 37.38, south = 30.00,\n               altitudeMin = 160, altitudeMaximum = 330,\n               altitudeUnits = \"meter\")\n\nPara descrever os métodos em metadados\n\nmethods_file &lt;- here::here(\"data\", \"hf205-methods.docx\")\nmethods &lt;- set_methods(methods_file)\n\nIdentificação dos indivíduos endereço e outras informações sobre contatos\n\nR_person &lt;- person(\"Aaron\", \"Ellison\", ,\"fakeaddress@email.com\", \"cre\", \n                  c(ORCID = \"0000-0003-4151-6081\"))\naaron &lt;- as_emld(R_person)\nothers &lt;- c(as.person(\"Benjamin Baiser\"), as.person(\"Jennifer Sirota\"))\nassociatedParty &lt;- as_emld(others)\nassociatedParty[[1]]$role &lt;- \"Researcher\"\nassociatedParty[[2]]$role &lt;- \"Researcher\"\n\nHF_address &lt;- list(\n                  deliveryPoint = \"324 North Main Street\",\n                  city = \"Petersham\",\n                  administrativeArea = \"MA\",\n                  postalCode = \"01366\",\n                  country = \"USA\")\n\npublisher &lt;- list(\n                 organizationName = \"Harvard Forest\",\n                 address = HF_address)\n\n\ncontact &lt;- \n  list(\n    individualName = aaron$individualName,\n    electronicMailAddress = aaron$electronicMailAddress,\n    address = HF_address,\n    organizationName = \"Harvard Forest\",\n    phone = \"000-000-0000\")\n\ncriando keywords para os dados\n\nkeywordSet &lt;- list(\n    list(\n        keywordThesaurus = \"LTER controlled vocabulary\",\n        keyword = list(\"bacteria\",\n                    \"carnivorous plants\",\n                    \"genetics\",\n                    \"thresholds\")\n        ),\n    list(\n        keywordThesaurus = \"LTER core area\",\n        keyword =  list(\"populations\", \"inorganic nutrients\", \"disturbance\")\n        ),\n    list(\n        keywordThesaurus = \"HFR default\",\n        keyword = list(\"Harvard Forest\", \"HFR\", \"LTER\", \"USA\")\n        ))\n\nOutras informações relevantes como abstract etc\n\npubDate &lt;- \"2012\" \n\ntitle &lt;- \"Thresholds and Tipping Points in a Sarracenia \nMicroecosystem at Harvard Forest since 2012\"\n\nabstract &lt;- \"The primary goal of this project is to determine\n  experimentally the amount of lead time required to prevent a state\nchange. To achieve this goal, we will (1) experimentally induce state\nchanges in a natural aquatic ecosystem - the Sarracenia microecosystem;\n(2) use proteomic analysis to identify potential indicators of states\nand state changes; and (3) test whether we can forestall state changes\nby experimentally intervening in the system. This work uses state-of-the\nart molecular tools to identify early warning indicators in the field\nof aerobic to anaerobic state changes driven by nutrient enrichment\nin an aquatic ecosystem. The study tests two general hypotheses: (1)\nproteomic biomarkers can function as reliable indicators of impending\nstate changes and may give early warning before increasing variances\nand statistical flickering of monitored variables; and (2) well-timed\nintervention based on proteomic biomarkers can avert future state changes\nin ecological systems.\"  \n\nintellectualRights &lt;- \"This dataset is released to the public and may be freely\n  downloaded. Please keep the designated Contact person informed of any\nplans to use the dataset. Consultation or collaboration with the original\ninvestigators is strongly encouraged. Publications and data products\nthat make use of the dataset must include proper acknowledgement. For\nmore information on LTER Network data access and use policies, please\nsee: http://www.lternet.edu/data/netpolicy.html.\"\n\n\n\nCriando o arquivo XML\nAgora que todas as informações foram criadas (atributos, dados físicos do arquivo, coverage, dados de contato), precisamos juntar todas elas em uma única lista.\n\ndataset &lt;- list(\n               title = title,\n               creator = aaron,\n               pubDate = pubDate,\n               intellectualRights = intellectualRights,\n               abstract = abstract,\n               associatedParty = associatedParty,\n               keywordSet = keywordSet,\n               coverage = coverage,\n               contact = contact,\n               methods = methods,\n               dataTable = dataTable)\n\nAntes de criar o arquivo XML é importante criar um uuid para o arquivo, que nada mais é que um identificador que qualquer um pode criar, como demonstrado a seguir. Para mais informações sobre o que é um uuid ver esta explicação no Wikipedia\n\neml &lt;- list(\n           packageId = uuid::UUIDgenerate(),\n           system = \"uuid\", # type of identifier\n           dataset = dataset)\n\nFinalmente criando o arquivo XML e validando.\n\nwrite_eml(eml, here::here(\"data\", \"eml_tutorialHF205.xml\"))\neml_validate(here::here(\"data\", \"eml_tutorialHF205.xml\"))",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#leituras-sugeridas",
+    "href": "aulas/dados_abertos/index.html#leituras-sugeridas",
+    "title": "Dados abertos",
+    "section": "Leituras sugeridas",
+    "text": "Leituras sugeridas\nEsta seção é baseada no documento produzido pelo Living Norway Project, que também oferece uma introdução muito interessante sobre Darwin Core e metadados para biodiversidade.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#exemplos-de-metadados-de-biodiversidade",
+    "href": "aulas/dados_abertos/index.html#exemplos-de-metadados-de-biodiversidade",
+    "title": "Dados abertos",
+    "section": "Exemplos de metadados de biodiversidade",
+    "text": "Exemplos de metadados de biodiversidade\nO melhor exemplo de esturutura digital que utiliza metadados de biodiversidade construídos desta maneira que mostrarei é o GBIF.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#instalação-e-dados",
+    "href": "aulas/dados_abertos/index.html#instalação-e-dados",
+    "title": "Dados abertos",
+    "section": "Instalação e dados",
+    "text": "Instalação e dados\nPrimeiro vamos instalar o pacote\n\ndevtools::install_github(\"https://github.com/LivingNorway/LivingNorwayR\")\nlibrary(LivingNorwayR)\n\nAqui os dados que serão utilizados no exemplo. Estes são os mesmos dados utilizados no tuturial do Living Norway R. Para mais detalhes visite a página deles.\nVamos utilizar um conjunto de dados que fizemos o download e está dentro da nossa pasta do curso para criar nosso arquivo Darwin Core.\n\n# Lendo o arquivo core\nTOVEEventTableDF &lt;- read.table(here::here(\"data\", \"TOVEData\", \"event.txt\"), sep = \"\\t\", header = TRUE)\nhead(TOVEEventTableDF)\n\nObtendo os arquivos extendidos, neste caso o arquivo de ocorrência de espécies. Podemos ver que se trata de um simples data frame onde os nomes das colunas seguem os códigos do Darwin Core\n\nTOVEOccTable &lt;- read.table(here::here(\"data\", \"TOVEData\", \"occurrence.txt\"), sep = \"\\t\", header = TRUE)\nhead(TOVEOccTable)",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#construindo-um-xml-baseado-em-darwin-core",
+    "href": "aulas/dados_abertos/index.html#construindo-um-xml-baseado-em-darwin-core",
+    "title": "Dados abertos",
+    "section": "Construindo um XML baseado em Darwin Core",
+    "text": "Construindo um XML baseado em Darwin Core\nAgora que temos nossos dados podemos construir um arquivo do tipo Darwin Core\n\nConstruindo o metadado para a tabela de eventos core\nPrimeiro precisamos definir o que será a tabela core e o que serão as suas extensões, que por sua vez podem ser mapeadas a partir de atributos comuns presentes em ambas as tabelas (neste caso o ID).\n\n# 1. Inicializando automaticamente - só funciona caso os nomes já estejam de acordo com o Darwin Core\nnewTOVEEventTable &lt;- initializeGBIFEvent(TOVEEventTableDF, \"id\", nameAutoMap = TRUE)\n\n# 2. Iniciando manualmente - podemos usar o nome dos atributos que correspondem a cada categoria do Darwin Core. \n    # podemos usar o nome ou o número da coluna\nnewTOVEEventTable &lt;- initializeGBIFEvent(TOVEEventTableDF, \"id\",\n  type = \"type\",\n  modified = \"modified\",\n  datasetName = \"datasetName\",\n  ownerInstitutionCode = \"ownerInstitutionCode\",\n  informationWithheld = \"informationWithheld\",\n  dataGeneralizations = \"dataGeneralizations\",\n  eventID = \"eventID\",\n  samplingProtocol = \"samplingProtocol\",\n  sampleSizeValue = \"sampleSizeValue\",\n  sampleSizeUnit = \"sampleSizeUnit\",\n  samplingEffort = \"samplingEffort\",\n  eventDate = \"eventDate\",\n  eventTime = \"eventTime\",\n  year = \"year\",\n  month = \"month\",\n  day = \"day\",\n  locationID = \"locationID\",\n  country = \"country\",\n  countryCode = \"countryCode\",\n  stateProvince = \"stateProvince\",\n  municipality = \"municipality\",\n  locality = \"locality\",\n  minimumElevationInMeters = \"minimumElevationInMeters\",\n  maximumElevationInMeters = \"maximumElevationInMeters\",\n  decimalLatitude = \"decimalLatitude\",\n  decimalLongitude = \"decimalLongitude\",\n  geodeticDatum = \"geodeticDatum\",\n  coordinateUncertaintyInMeters = \"coordinateUncertaintyInMeters\")\n\n# Podemos checar se o mapeamento dos termos se deu corretamente\nnewTOVEEventTable$getTermMapping()\n\n\n\nConstruindo os metadados para as extensões da tabela core\nNeste caso a tabela a extensão que temos da tabela chave é a tabela de ocorrência de espécies. Vamos mapear ela da mesma forma que fizemos para a tabela core\n\n# Função para inicialização da tabela\nnewTOVEOccTable &lt;- initializeGBIFOccurrence(TOVEOccTable, \"id\", nameAutoMap = TRUE)\n\n# Checando quais eventos foram mapeados na tabela, o que aparece com NA não foi mapeado, ou porque não existe ou porque tem o nome incorreto\nnewTOVEOccTable$getTermMapping()\n\n\n\nConstruindo o EML\nO último elemento que precisamos para construir nossos metadados para os arquivos de biodiversidade que estamos utilizando é o arquivo EML, que vocês já conhecem. O EML pode ser criado de várias formas. Vimos anteriormente como criar um EML usando o pacote {EML}. O pacote {LivingNorwayR} oferece uma maneira simples de criar um arquivo XML usando um arquivo .Rmd, ou seja, usando o Rmarkdown. Vamos entender os detalhes de um arquivo do tipo Rmd mais adiante, por hora precisamos apenas saber que ele é um arquivo que permite mesclar textos e códigos, além de possibilitar criar tags para seções (Como os títulos num documento Word). Essas tags são utilizadas pelas funções do LivingNorwayR para criar o arquivo XML. Vale notar que isso é mais limitante que criar um XML usando o EML, mas para questões didáticas vamos usar um arquivo .Rmd pronto, que está na pasta de dados deste diretório.\n\ncreatedTOVEMetadata &lt;- initializeDwCMetadata(fileLocation = here::here(\"data\", \"TOVEData\", \"LNWorkshopExample_Metadata.rmd\"), fileType = \"rmarkdown\")\n\n# Exportando o EML\ncreatedTOVEMetadata$exportToEML(file.path(here::here(\"data\", \"TOVEData\"), \"newMetadata.xml\"))\n\nEste novo metadado precisa ser lido para o R e assim podemos juntá-lo com os outros arquivos\n\nnewTOVEMetadata &lt;- initializeDwCMetadata(file.path(here::here(\"data\", \"TOVEData\"), \"newMetadata.xml\"),\n  fileType = \"eml\" # This line is not required if the file has the \".xml\" file extension\n)",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#juntando-todos-os-arquivos",
+    "href": "aulas/dados_abertos/index.html#juntando-todos-os-arquivos",
+    "title": "Dados abertos",
+    "section": "Juntando todos os arquivos",
+    "text": "Juntando todos os arquivos\nAgora temos os arquivos necessários para juntar em um único arquivo zipado que pode ser guardado localmente ou submetido em alguma plataforma de dados, por exemplo, GBIF, como ilustrado abaixo\n\n\n\n\n\n\n\n\n\nPara juntar todos os arquivos criados precisamos usar a seguinte função\n\n# criando um único arquivo com todos os objetos criados anteriormente\nnewTOVEArchive &lt;- initializeDwCArchive(newTOVEEventTable, list(newTOVEOccTable), newTOVEMetadata)\n\nPara salvar o objeto .zip, que agora é nosso Darwin Core Archive, podemos fazer o seguinte\n\nnewTOVEArchive$exportAsDwCArchive(file.path(here::here(\"data\", \"NEWTOVEData\"), \"newDwCArchive.zip\"))",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#explorando-o-darwin-core-archive",
+    "href": "aulas/dados_abertos/index.html#explorando-o-darwin-core-archive",
+    "title": "Dados abertos",
+    "section": "Explorando o Darwin Core Archive",
+    "text": "Explorando o Darwin Core Archive\nUma vez criado o arquivo no formato Darwin Core Archive podemos fazer o caminho inverso e obter as tabelas a partir do arquivo que criamos.\nPara tanto podemos usar as funções do pacote LivingNorwayR para ler o arquivo zip e extrair as tabelas, incluindo os metadados.\n\nlocalDataLoc2 &lt;- file.path(here::here(\"data\", \"NEWTOVEData\"), \"newDwCArchive.zip\") \nNEWTOVEArchive &lt;- initializeDwCArchive(localDataLoc2, \"UTF-8\")\n\nPodemos agora explorar os dados dentro do arquivo Darwin Core criado nos passos anteriores. Ou seja, podemos retomar os dados e importar para dentro do R para fazer, por exemplo, novas análises\n\n# obtendo o dado\nNEWTOVEEventTable &lt;- NEWTOVEArchive$getCoreTable()\nclass(NEWTOVEEventTable)\n\n# Podemos exportar como um dataframe\nNEWTOVEEventTableDF &lt;- NEWTOVEEventTable$exportAsDataFrame()\n\n# obtendo dados da tabela extendida\nNEWTOVEEventTableDF &lt;- NEWTOVEEventTable$exportAsDataFrame()\n# exportando como dataframe\nhead(NEWTOVEEventTableDF)",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#leituras-sugeridas-1",
+    "href": "aulas/dados_abertos/index.html#leituras-sugeridas-1",
+    "title": "Dados abertos",
+    "section": "Leituras sugeridas",
+    "text": "Leituras sugeridas\nPara uma introdução mais completa sobre os metadados sugiro este artigo. Para uma introdução da importância dos metadados para contruir conjuntos de dados integrados sugiro o artigo de Jones et al. (2006). Para um exemplo de base de dados online que se utiliza das potencialidades dos metadados sugiro visitar o KNB - Knowledge Network Biocomplexity.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#exemplos-de-metadados",
+    "href": "aulas/dados_abertos/index.html#exemplos-de-metadados",
+    "title": "Dados abertos",
+    "section": "Exemplos de metadados",
+    "text": "Exemplos de metadados\nPara um exemplo simples de como um metadado se parece veja aqui. Para um exemplo mais completo sugiro este arquivo. Esta introdução trazida pelo NEON (National Ecological Observatory) é muito interessante para compreender de maneira geral a importância de metadados para síntese e como eles podem ser obtidos facilmente com auxílio do pacote EML. O DataOne é uma plataforma de dados que também se utiliza dos arquivos XML para reportar as características gerais dos dados.",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#geral",
+    "href": "aulas/dados_abertos/index.html#geral",
+    "title": "Dados abertos",
+    "section": "Geral",
+    "text": "Geral\n\nBledsoe E, Burant J, Higino G, Roche D, Binning S, Finlay K, Pither J, Pollock L, Sunday J, Srivastava D (2021) Data rescue: saving environmental data from extinction. https://doi.org/10.32942/osf.io/ra6ze\nCaetano DS, Aisenberg A (2014) Forgotten treasures: the fate of data in animal behaviour studies. Animal Behaviour 98:1–5. https://doi.org/10.1016/j.anbehav.2014.09.025\nColavizza G, Hrynaszkiewicz I, Staden I, Whitaker K, McGillivray B (2020) The citation advantage of linking publications to research data. PLOS ONE 15:e0230416. https://doi.org/10.1371/journal.pone.0230416\nCulina A, Baglioni M, Crowther TW, Visser ME, Woutersen-Windhouwer S, Manghi P (2018) Navigating the unfolding open data landscape in ecology and evolution. Nat Ecol Evol 2:420–426. https://doi.org/10.1038/s41559-017-0458-2\nGomes DGE, Pottier P, Crystal-Ornelas R, et al (2022) Why don’t we share data and code? Perceived barriers and benefits to public archiving practices. Proceedings of the Royal Society B: Biological Sciences 289:20221113. https://doi.org/10.1098/rspb.2022.1113\nGurstein MB (2011) Open data: Empowering the empowered or effective data use for everyone? First Monday. https://doi.org/10.5210/fm.v16i2.3316\nLima RAF, Phillips OL, Duque A, et al (2022) Making forest data fair and open. Nat Ecol Evol 1–3. https://doi.org/10.1038/s41559-022-01738-7\nMcIntosh ACS, Cushing JB, Nadkarni NM, Zeman L (2007) Database design for ecologists: Composing core entities with observations. Ecological Informatics 2:224–236. https://doi.org/10.1016/j.ecoinf.2007.07.003\nMello M (2017) O que é um data paper? – Sobrevivendo na Ciência. https://marcoarmello.wordpress.com/2017/09/11/datapaper/\nPerkel J (2016) Democratic databases: science on GitHub. Nature 538:127–128. https://doi.org/10.1038/538127a\nRoche DG, Berberi I, Dhane F, Lauzon F, Soeharjono S, Dakin R, Binning SA (2022) Slow improvement to the archiving quality of open datasets shared by researchers in ecology and evolution. Proceedings of the Royal Society B: Biological Sciences 289:20212780. https://doi.org/10.1098/rspb.2021.2780\nRoche DG, Kruuk LEB, Lanfear R, Binning SA (2015) Public Data Archiving in Ecology and Evolution: How Well Are We Doing? PLoS Biol 13:e1002295. https://doi.org/10.1371/journal.pbio.1002295\nVanz SA de S, Passos PCSJ, Caregnato SE, Pavão CMG, Borges EN, Rocha RP da, Gabriel Junior RF, Azambuja LAB (2018) Acesso aberto a dados de pesquisa no Brasil: práticas e percepções dos pesquisadores: relatório 2018. Universidade Federal do Rio Grande do Sul. https://lume.ufrgs.br/handle/10183/185195\nVines TH, Albert AYK, Andrew RL, Débarre F, Bock DG, Franklin MT, Gilbert KJ, Moore J-S, Renaut S, Rennison DJ (2014) The Availability of Research Data Declines Rapidly with Article Age. Current Biology 24:94–97. https://doi.org/10.1016/j.cub.2013.11.014\nWestoby M, Falster DS, Schrader J (2021) Motivating data contributions via a distinct career currency. Proceedings of the Royal Society B: Biological Sciences 288:20202830. https://doi.org/10.1098/rspb.2020.2830\nWilkinson MD, Dumontier M, Aalbersberg IjJ, et al (2016) The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3:160018. https://doi.org/10.1038/sdata.2016.18\nGlobal Indigenous Data Alliance (2023) CARE Principles. In: Global Indigenous Data Alliance. https://www.gida-global.org/care. Accessed 6 Aug 2023",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#plano-de-gestão-e-gestão-de-dados",
+    "href": "aulas/dados_abertos/index.html#plano-de-gestão-e-gestão-de-dados",
+    "title": "Dados abertos",
+    "section": "Plano de gestão e gestão de dados",
+    "text": "Plano de gestão e gestão de dados\n\nBritish Ecological Society (2014) A guide to data management in ecology and evolution.\nData Carpentry Data Carpentry Workshops in Ecology. In: Data Carpentry. https://datacarpentry.org/lessons/. Accessed 7 Aug 2023\nMichener WK (2015) Ten Simple Rules for Creating a Good Data Management Plan. PLOS Computational Biology 11:e1004525. https://doi.org/10.1371/journal.pcbi.1004525\nStrasser C, Cook R, Michener W, Budden A (2012) Primer on Data Management: What You Always Wanted to Know. https://doi.org/10.5060/D2251G48",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#organização-de-dados",
+    "href": "aulas/dados_abertos/index.html#organização-de-dados",
+    "title": "Dados abertos",
+    "section": "Organização de dados",
+    "text": "Organização de dados\n\nBroman KW, Woo KH (2017) Data organization in spreadsheets. The American Statistician https://doi.org/10.1080/00031305.2017.1375989\nWickham H (2014) Tidy Data. Journal o Statistical Software 59. https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "aulas/dados_abertos/index.html#metadados-1",
+    "href": "aulas/dados_abertos/index.html#metadados-1",
+    "title": "Dados abertos",
+    "section": "Metadados",
+    "text": "Metadados\n\nBoettiger C, Jones M (2022) EML: Read and Write Ecological Metadata Language Files. https://docs.ropensci.org/EML/\nJones MB, Schildhauer MP, Reichman OJ, Bowers S (2006) The New Bioinformatics: Integrating Ecological Data from the Gene to the Biosphere. Annu Rev Ecol Evol Syst 37:519–544. https://doi.org/10.1146/annurev.ecolsys.37.091305.110031\nJones M, O’Brien M, Mecum B, Boettiger C, Schildhauer M, Maier M, Whiteaker T, Earl S, Chong S (2019) Ecological Metadata Language version 2.2.0. https://doi.org/10.5063/f11834t2\nLortie CJ, Vargas Poulsen C, Brun J, Kui L (2022) Tabular strategies for metadata in ecology, evolution, and the environmental sciences. Ecology and Evolution 12:e9245. https://doi.org/10.1002/ece3.9245\nVideo YouTube sobre conversão metadados em tabela Excel para EML (Kui Li)\nSmith C (2022) EMLassemblyline: A tool kit for building EML metadata workflows. https://ediorg.github.io/EMLassemblyline/index.html",
+    "crumbs": [
+      "Aulas",
+      "Introdução a ciência aberta",
+      "Dados abertos"
+    ]
+  },
+  {
+    "objectID": "about.html#gabriel",
+    "href": "about.html#gabriel",
+    "title": "Sobre o curso",
+    "section": "Gabriel",
+    "text": "Gabriel\n\n\n\n\n\n\n\n\n\nSou formado em licenciatura em Ciências Biológicas (apesar da dúvida entre Ciências Sociais e História), fiz algumas andanças de difícil reprodutibilidade para obter o mestrado (Ecologia e Conservação UFMS) e doutorado (Ecologia UFRGS). Após um tempo fora (posdoc Texas A&M University), a saudade do pequi e da guariroba do cerrado falou mais alto e retornei como posdoc da Universidade Federal de Goiás no INCT-EECBio e depois como posdoc na Universidade de São Paulo (USP). Atualmente sou professor na Universidade Federal de Minas Gerais (UFMG). Venho desenvolvendo métodos e ferramentas computacionais em macroecologia e macroevolução. Aqui um pouquinho mais do que venho desenvolvendo.",
+    "crumbs": [
+      "Informações sobre o curso",
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "about.html#melina",
+    "href": "about.html#melina",
+    "title": "Sobre o curso",
+    "section": "Melina",
+    "text": "Melina\n\n\n\n\n\n\n\n\n\nSou ecóloga e cientista de dados na Universidade de Regemsbirg. Tenho graduação em biologia (UFRJ), mestrado (UFRJ) e doutorado em Ecologia (USP). Acumulei também um MBA em Gestão Ambiental (Poli-USP) e MBA em Ciência de Dados (ESALQ-USP). Ao longo dos anos trabalhei em diferentes áreas da ecologia e biologia da conservação como ecologia da paisagem, de comunidades, de populações e ecologia aplicada. Tenho bastante interesse na aplicação métodos estatísticos para descobertas ecológicas (modelos mistos são meu xodó). Adoro escalada, trilhas e esportes de aventura no geral! Ah, e sou uma entusiasta do movimento da Ciência Aberta!! Para me achar e saber mais sobre mim, veja meu site.",
     "crumbs": [
       "Informações sobre o curso",
       "Apresentação"

@@ -1,0 +1,17 @@
+{
+  "hash": "d6ce0c88cedff452826e01cf09e5db20",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Glossário do versionamento\"\nformat:\n  html:\n    code-copy: true\n    code-tools:\n      source: true\n      toggle: true # Opcional: esconde o botão de ocultar/mostrar códigos se não quiser\nbibliography: references.bib\n---\n\nUma das maiores dificuldades quando começamos utilizar versionamento\n    em nossos trabalhos é a quantidade de termos técnicos utilizados\n    nessa área. *Pull*, *push*, *commit*, *pull request*, *merge*, *fast forward*,\n    *main/origin* e por aí vai. \n\nPor isso, o objetivo dessa seção é compilar um conjunto de termos e seus \n    significados para facilitar o entendimento dos procedimentos de versionamento.\nMuitos dos significados são retirados do ótimo artigo [Pedro Braga na Methods\n    in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/2041-210X.14108) (@bragaNotJustProgrammers2023).\n    Nessa seção você pode encontrar os principais termos utilizados em trabalhos\n    que envolvem versionamento. Para sugestões, correções ou adições de termos\n    abra um [*Issue*]() ou submeta um *pull request*. Os termos estão colocados\n    em inglês pois é a maneira mais comum que vocês irão encontrar na documentação\n    do Git e do GitHub.\n    \n::: {.callout-note collapse=\"true\"}\n## Glossário\n\n* **Repository:** Um conjunto de arquivos que é monitorado pelo Git (nossa\n    ferramenta de versionamento). Os repositórios podem ser tanto remotos \n    quanto locais, dependendo de onde eles estão (respectivamente, em um \n    serviço de hospedagem remoto, como o GitHub ou/e no seu computador)\n* **Branch:** Representa o caminho de desenvolvimento do projeto. Repositórios\n    podem ter um único, geralmente denominado *main* ou *master*, ou múltiplos\n    branches. Esses multiplos branches podem representar caminhos divergentes de\n    um dado projeto (por exemplo, uma modificação em análises, um colaborador\n    que está testando uma mudança em algum aspecto do projeto, etc.). O uso \n    prático dos branches está ilustrado em [Trabalho colaborativo]()\n* **Commit:** Função do Git que possibilita registrar \"fotografias\" que representam\n    diferentes momentos do desenvolvimento do projeto. No versionamento com o \n    Git os commits possibilitam a identificação e o rastreamento das modificações\n    realizadas no repositório. O uso prático do commit está ilustrado em \n    [ABC do versionamento]()\n* **Push e Pull:**\n* **Pull request:**\n* **Merge:** \n* **Release:**\n* **Head:** Termo utilizado para representar qual o local atual que você se\n    encontra no histórico de desenvolvimento do seu repositório. \n:::\n\n# Guia resumido de funções do git\n\nAqui você pode encontrar uma pequena cola com algumas das principais funções\n    do git. Este material foi produzido por [Julia Evans](https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/)\n\n\n::: {.cell}\n::: {.cell-output-display}\n![cheat-sheet-git](figuras/git-cheat-sheet.png){width=1100}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

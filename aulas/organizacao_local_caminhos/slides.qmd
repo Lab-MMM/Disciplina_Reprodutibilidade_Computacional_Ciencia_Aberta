@@ -1,0 +1,169 @@
+---
+title: "Conhecendo sua máquina"
+subtitle: "Organização local, caminhos e arquivos"
+author: "Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos quantitativos"
+
+format: 
+  qmdrslides-revealjs:
+    chalkboard: true
+    slide-number: true
+    highlight-style: espresso
+---
+
+```{r}
+library(tidyverse)
+```
+
+## Organização local: questão de estilo? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+> Na minha bagunça eu me encontro...
+
+![](figuras/quarto_desorganizado.jpeg){fig-align="center" width="70%"}
+
+## Modelo mínimo para organização local de um projeto {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+::::: columns
+::: {.column width="50%"}
+![Figura retirada do curso [Artigo a prova de futuro](https://phdpablo.github.io/curso-open-science/04-project.html) ](figuras/my-tier-folders-pt.png){fig-align="center" width="80%"}
+:::
+::: {.column width="50%"}
+- Segue uma *estrutura hierarquica* compreensível
+
+- Separação de arquivos
+
+- *Nomes curtos* (sem caracteres especiais) e com *significado*
+
+- Acomoda *particularidades* para cada projeto
+
+- **README** é essencial para a descrição 
+:::
+:::::
+
+## Nomeando arquivos {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+![](figuras/xkcd_names_fies.png){fig-align="center" width="70%"}
+
+## Nomeando arquivos - Baseado no trabalho da [Jenny Brian](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf)
+
+::::: columns
+::: {.column width="50%"}
+![](figuras/naming_things_jenny_brian.png){fig-align="center" width="70%"}
+:::
+::: {.column width="50%"}
+- Lido por máquinas
+- Lido por humanos
+- A ordem que se apresentam faz sentido 
+:::
+:::::
+
+## Nomeando arquivos - Baseado no trabalho da [Jenny Brian](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf)
+
+::::: columns
+::: {.column width="50%"}
+![](figuras/naming_things_jenny_brian2.png){fig-align="center" width="70%"}
+:::
+::: {.column width="50%"}
+- Lido por máquinas
+- Lido por humanos
+- A ordem que se apresentam faz sentido 
+:::
+:::::
+
+## Nomeando arquivos - Baseado no trabalho da [Jenny Brian](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf)
+
+::::: columns
+::: {.column width="50%"}
+![](figuras/naming_things_jenny_brian3.png){fig-align="center" width="70%"}
+:::
+::: {.column width="50%"}
+- Lido por máquinas
+- Lido por humanos
+- A ordem que se apresentam faz sentido 
+:::
+:::::
+
+## Reprodutibilidade: Por que? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+::::: columns
+::: {.column width="50%"}
+![](figuras/app_encontro.png){fig-align="center" width="50%"}
+:::
+
+::: {.column width="50%"}
+![](figuras/MichaelScott-tinder.jpeg){fig-align="center" width="50%"}
+:::
+:::::
+
+::: fragment
+> **"O artigo científico é o Tinder da Ciência. Não é exatamente mentira, mas somos espertos o suficiente para não casar com alguém só pelo seu perfil aparente"**
+:::
+
+# Reprodutibilidade: a importância do processo {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+![](figuras/nature-logo.png){fig-align="center" width="30%"}
+
+![](figuras/science-logo.png){fig-align="center" width="30%"}
+
+![](figuras/PNAS_logo.png){fig-align="center" width="30%"}
+
+## Reprodutibilidade: a importância do processo {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+::::: columns
+::: {.column width="50%"}
+![](figuras/environmental-data-science-r4ds-general.png){fig-align="center" width="100%"}
+:::
+
+::: {.column width="50%"}
+-   Processo é tão importante quanto o resultado
+
+-   A qualidade do resultado está ligada ao processo
+
+-   Meios justificam os fins (meios são tão importantes quanto o fim)
+:::
+:::::
+
+## Reprodutibilidade: Por que? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+::::: columns
+::: {.column width="50%"}
+![](figuras/reproducibility_crisis_0.png){fig-align="center" width="100%"}
+:::
+
+::: {.column width="50%"}
+![](figuras/reproducibility_crisis_1.jpg.png){fig-align="center" width="70%"}
+:::
+:::::
+
+## Vivemos uma crise de reprodutibilidade? Sim! Por que? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+![](figuras/reproducibility_crisis_2.png){fig-align="center" width="90%"}
+
+## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+> "Reproducibility is like brushing your teeth. Once you learn it, it becomes a habit"
+
+::: fragment
+![](figuras/factors_reproducible_solutions.png){fig-align="center" width="50%"}
+:::
+
+## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+![](figuras/factors_reproducible_solutions2.png){fig-align="center" width="60%"} \## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+![](figuras/lula-ppt%202.png){fig-align="center" width="80%"}
+
+## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+::::: columns
+::: {.column width="50%"}
+![](figuras/braga_et_al_MEE.png){fig-align="center" width="40%"}
+:::
+
+::: {.column width="50%"}
+![](figuras/mee314108-fig-0002-m.jpeg){fig-align="center" width="80%"}
+:::
+:::::
+
+## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+
+![](figuras/mee314108-fig-0002-m.jpeg){fig-align="center" width="80%"}

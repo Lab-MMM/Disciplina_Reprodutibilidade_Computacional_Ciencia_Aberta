@@ -325,8 +325,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula0_intro_inferencia/index.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ciência aberta, reprodutibilidade computacional e ciência aberta</span></a>
+  <a href="./aulas/ciencia_aberta/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introdução a Ciência Aberta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aulas/dados_abertos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dados abertos</span></a>
   </div>
 </li>
       </ul>
@@ -371,8 +377,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula2_descricao-padroes_I/index.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ABC do versionamento</span></a>
+  <a href="./aulas/aula0_intro_reprodutibilidade/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ferramentas para controle de versão</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aulas/aula1_git_github_basics/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introdução ao controle de versão</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -384,13 +396,54 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./aulas/aula3_descricao-padroes_II/index.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Trabalho colaborativo</span></a>
+ <span class="menu-text">Trabalho colaborativo - branches, forks, pull requests, issues</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./aulas/aula3_descricao-padroes_II/index.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conflitos e como evitá-los (ou resolvê-los)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aulas/aula3_descricao-padroes_II/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Versionando pacotes e dependências</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aulas/aula3_descricao-padroes_II/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Releases e depósito permanente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aulas/glossario/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossário do versionamento</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Documentos dinâmicos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aulas/aula3_descricao-padroes_II/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">O que são e como funcionam</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aulas/aula3_descricao-padroes_II/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Além do artigo - materiais suplementares, vinhetas, sítios públicos</span></a>
   </div>
 </li>
       </ul>
@@ -407,8 +460,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#professores" id="toc-professores" class="nav-link active" data-scroll-target="#professores">Professores</a></li>
-  <li><a href="#recursos-e-referências" id="toc-recursos-e-referências" class="nav-link" data-scroll-target="#recursos-e-referências">Recursos e referências</a></li>
+  <li><a href="#ministrantes" id="toc-ministrantes" class="nav-link active" data-scroll-target="#ministrantes">Ministrantes</a>
+  <ul class="collapse">
+  <li><a href="#gabriel" id="toc-gabriel" class="nav-link" data-scroll-target="#gabriel">Gabriel</a></li>
+  <li><a href="#melina" id="toc-melina" class="nav-link" data-scroll-target="#melina">Melina</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -435,38 +491,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>O conteúdo nesse sítio tem como objetivo servir como material de apoio para a disciplina **Tópicos Especiais - Métodos e técnicas em ecologia, conservação e manejo da vida silvestre - Diversidade Funcional e filogenética de <del>comunidades</del>, parte da grade de disciplinas oferecidas no PPG Ecologia, Conservação e Manejo da Vida Silvestre da Universidade Federal de Minas Gerais, ministrada por mim, <a href="http://lattes.cnpq.br/2456515948049565">Gabriel Nakamura</a> e pelo <a href="http://lattes.cnpq.br/1431026167939116">Rafa Leitão</a>.</p>
-<p>Especificamente, aqui você irá encontrar os materiais para a segunda semana da disciplina, onde, apesar do nome oficial ser Diversidade Filogenética, iremos abordar menos sobre isso, e mais sobre o que gera, de onde vem, e como podemos utilizar alguns métodos filogenéticos para responder questões em ecologia e macroevolução. Este curso não tem como intuito apresentar uma lista exaustiva de métricas e métodos, mas sim fornecer as bases teóricas e metodológicas para que os estudantes possam eles mesmos chegarem nas melhores alternativas para representar e responder suas questões.</p>
-<p>Para uma visão geral dos temas, horários e conteúdos veja <a href="">esta página</a>.</p>
-<section id="professores" class="level2">
-<h2 class="anchored" data-anchor-id="professores">Professores</h2>
-<div style="float: left; margin-right: 15px;">
-<div class="quarto-figure quarto-figure-center">
+<p>Olá!</p>
+<p>Obrigado pelo interesse em participar da disciplina “Boas Práticas e Ferramentas da Ciência Aberta na Ecologia”. Nesta disciplina serão abordados conceitos teóricos, tendências e ferramentas computacionais para desenvolver pesquisas que vão ao encontro dos princípios e movimento da ciência aberta.</p>
+<p>Este sítio servirá como um guia para nossas aulas. Nele vocês encontrarão os materiais necessários bem como os scripts que utilizaremos durante as aulas para as atividades práticas. Ah! O site continuará funcionando após o término da disciplina, portanto, sempre que tiver alguma dúvida é só voltar aqui e revisitar o que vimos nas aulas.</p>
+<p><a href="">Clique aqui</a> para uma visão completa do cronograma</p>
+<section id="ministrantes" class="level1">
+<h1>Ministrantes</h1>
+<p>O curso será ministrado presencialmente por Gabriel Nakamura. Porém, este curso foi concebido em conjunto com a Melina Leite</p>
+<section id="gabriel" class="level2">
+<h2 class="anchored" data-anchor-id="gabriel">Gabriel</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="./images/Rafa_leitao_image2.jpg" class="img-fluid figure-img" width="200"></p>
-<figcaption>Rafa Leitão</figcaption>
+<p><img src="images/Gabriel_Nakamura.jpg" class="img-fluid figure-img" style="width:20.0%"></p>
 </figure>
 </div>
 </div>
-<p>Rafa é professor Adjunto do Departamento de Genética, Ecologia e Evolução (GEE/ICB) da Universidade Federal de Minas Gerais (UFMG) e orientador permanente do Programa de Pós-Graduação em Ecologia, Conservação e Manejo de Vida Silvestre (ECMVS-UFMG). Doutor em Biologia de Água Doce pelo Instituto Nacional de Pesquisas da Amazônia (BADPI-INPA) e em ‘Ecosystèmes’ pela Universidade de Montpellier (ESA-UM, França). Bacharel em Ciências Biológicas e mestre em Ecologia pela Universidade Federal do Rio de Janeiro (UFRJ). Atua principalmente nas áreas de ecologia de comunidades, diversidade funcional, conservação de ecossistemas aquáticos, interações interespecíficas e ictiologia.</p>
-<div style="clear: both;">
-
 </div>
-<div style="float: left; margin-right: 15px;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./images/Gabriel_Nakamura.jpg" class="img-fluid figure-img" width="200"></p>
-<figcaption>Gabriel Nakamura</figcaption>
-</figure>
-</div>
-</div>
-<p>Gabriel é professor no Departamento de Genética, Ecologia e Evolução da UFMG e credenciado como membro permanente do programa de pós-graduação em Ecologia, Conservação e Manejo da Vida Silvestre. Tem graduação em Ciências Biológicas (licenciatura plena, UFMS), mestrado em Ecologia e Conservação (UFMS) e doutorado em Ecologia (UFRGS). Minha pesquisa busca compreender como processos históricos (especiação, extinção, dispersão) e ecológicos geram e moldam a biodiversidade no tempo profundo. Atuo principalmente no desenvolvimento de ferramentas numéricas para quantificar padrões e processos macroecológicos e macroevolutivos. Tenho experiência em métodos quantitativos, simulações, ecologia de comunidades e reprodutibilidade em pesquisa. Me interesso também por vieses no conhecimento biológico e na produção científica, sobretudo na comparação entre norte e sul globais, visando promover equidade, diversidade e inclusão na ciência. Fui pesquisador em biogeografia computacional na Texas AM University. Sou editor associado dos periódicos Austral Ecology e Perspectives in Ecology and Conservation e pesquisador do INCT - Ecologia, Evolução e Conservação da Biodiversidade. Mais informações em minha <a href="https://gabrielnakamura.netlify.app/">página profissional</a></p>
+<p>Sou formado em licenciatura em Ciências Biológicas (apesar da dúvida entre Ciências Sociais e História), fiz algumas andanças de difícil reprodutibilidade para obter o mestrado (Ecologia e Conservação UFMS) e doutorado (Ecologia UFRGS). Após um tempo fora (posdoc Texas A&amp;M University), a saudade do pequi e da guariroba do cerrado falou mais alto e retornei como posdoc da Universidade Federal de Goiás no INCT-EECBio e depois como posdoc na Universidade de São Paulo (USP). Atualmente sou professor na Universidade Federal de Minas Gerais (UFMG). Venho desenvolvendo métodos e ferramentas computacionais em macroecologia e macroevolução. <a href="http://lattes.cnpq.br/2456515948049565">Aqui</a> um pouquinho mais do que venho desenvolvendo.</p>
 </section>
-<section id="recursos-e-referências" class="level2">
-<h2 class="anchored" data-anchor-id="recursos-e-referências">Recursos e referências</h2>
-<p>Lista com alguns recursos que podem ser utilizados na disciplina de ecologia filogenética ou macroecologia filogenética. - Livro do Luke Harmon sobre <a href="https://lukejharmon.github.io/pcm/pdf/phylogeneticComparativeMethods.pdf">método comparativo</a> - <a href="https://sta210-s22.github.io/website/">site utilizado como modelo para de layout para site da disciplina</a> - Livro do Nate Swenson - Phylogenetic Ecology como base para organização do conteúdo, principalmente a sequência e os eixos apresentados - Cassey Dunn book - very very good source of information on phylogenies and <a href="https://dunnlab.org/phylogenetic_biology/phylogenies.html">phylogenetic inference</a> - Special issue in <a href="https://royalsocietypublishing.org/rstb/issue/380/1919">Phil Transactions B on phylogenetic models</a> - Figure tree by Darwin in <a href="https://dunnlab.org/phylogenetic_biology/figures/darwin.png">On the origin of species</a></p>
+<section id="melina" class="level2">
+<h2 class="anchored" data-anchor-id="melina">Melina</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="images/melina-foto.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Sou ecóloga e cientista de dados na Universidade de Regemsbirg. Tenho graduação em biologia (UFRJ), mestrado (UFRJ) e doutorado em Ecologia (USP). Acumulei também um MBA em Gestão Ambiental (Poli-USP) e MBA em Ciência de Dados (ESALQ-USP). Ao longo dos anos trabalhei em diferentes áreas da ecologia e biologia da conservação como ecologia da paisagem, de comunidades, de populações e ecologia aplicada. Tenho bastante interesse na aplicação métodos estatísticos para descobertas ecológicas (modelos mistos são meu xodó). Adoro escalada, trilhas e esportes de aventura no geral! Ah, e sou uma entusiasta do movimento da <strong>Ciência Aberta</strong>!! Para me achar e saber mais sobre mim, veja meu <a href="https://melinaleite.weebly.com/">site</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

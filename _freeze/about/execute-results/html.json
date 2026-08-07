@@ -1,0 +1,15 @@
+{
+  "hash": "4b1499a0880f7233a7a31e83538a2ae9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Sobre o curso\"\n---\n\nOlá!\n\nObrigado pelo interesse em participar da disciplina \"Boas Práticas e Ferramentas\n    da Ciência Aberta na Ecologia\". Nesta disciplina serão abordados conceitos\n    teóricos, tendências e ferramentas computacionais para desenvolver pesquisas\n    que vão ao encontro dos princípios e movimento da ciência aberta. \n\nEste sítio servirá como um guia para nossas aulas. Nele vocês encontrarão os\n    materiais necessários bem\n    como os scripts que utilizaremos durante as aulas para as atividades\n    práticas. Ah! O site continuará funcionando após o término da disciplina,\n    portanto, sempre que tiver alguma dúvida é só voltar aqui e revisitar o que\n    vimos nas aulas.\n    \n[Clique aqui]() para uma visão completa do cronograma\n\n# Ministrantes\n\nO curso será ministrado presencialmente por Gabriel Nakamura. Porém, este curso\n    foi concebido em conjunto com a Melina Leite\n\n## Gabriel\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](images/Gabriel_Nakamura.jpg){width=20%}\n:::\n:::\n\n\nSou formado em licenciatura em Ciências Biológicas (apesar da dúvida entre Ciências\n    Sociais e História), fiz algumas andanças de difícil reprodutibilidade para\n    obter o mestrado (Ecologia e Conservação UFMS) e doutorado (Ecologia UFRGS).\n    Após um tempo fora (posdoc Texas A&M University), a saudade do pequi e da\n    guariroba do cerrado falou mais alto e retornei como posdoc da Universidade\n    Federal de Goiás no INCT-EECBio e depois como posdoc na Universidade de São\n    Paulo (USP). Atualmente sou professor na Universidade Federal de Minas\n    Gerais (UFMG). Venho desenvolvendo  métodos e ferramentas computacionais em\n    macroecologia e macroevolução.\n    [Aqui](http://lattes.cnpq.br/2456515948049565) um pouquinho mais do que\n    venho desenvolvendo.\n\n## Melina\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](images/melina-foto.png){width=20%}\n:::\n:::\n\n\nSou ecóloga e cientista de dados na Universidade de Regemsbirg. Tenho graduação\n    em biologia (UFRJ), mestrado (UFRJ) e doutorado em Ecologia (USP). Acumulei\n    também um MBA em Gestão Ambiental (Poli-USP) e MBA em Ciência de Dados\n    (ESALQ-USP). Ao longo dos anos trabalhei em diferentes áreas da ecologia e\n    biologia da conservação como ecologia da paisagem, de comunidades, de\n    populações e ecologia aplicada. Tenho bastante interesse na aplicação\n    métodos estatísticos para descobertas ecológicas (modelos mistos são meu\n    xodó). Adoro escalada, trilhas e esportes de aventura no geral! Ah, e sou\n    uma entusiasta do movimento da **Ciência Aberta**!! Para me achar e saber\n    mais sobre mim, veja meu [site](https://melinaleite.weebly.com/).\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
