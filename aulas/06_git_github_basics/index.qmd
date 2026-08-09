@@ -14,7 +14,7 @@ Vimos nas aulas teóricas que essas palavrinhas não são nada mais que ações 
 
 Já temos um repositório remoto, agora precisamos que ele exista em nossos computadores para que possamos sincronizar nosso trabalho local e remoto. De maneira geral o que queremos fazer a partir de agora está ilustrado na figura seguinte
 
-```{r echo=FALSE,eval=TRUE,out.width="55%"}
+```{r echo=FALSE,eval=TRUE,out.width="55%",fig.cap="Uma visão geral de um projeto versionado. Ilustração feita por [Allison Horst](https://allisonhorst.com/git-github)"}
 knitr::include_graphics("figuras/version-control-all.png")
 ```
 
@@ -24,7 +24,7 @@ O primeiro passo é realizar uma clonagem!
 
 ## O Clone
 
-```{r echo=FALSE,eval=TRUE,fig.cap="Referência de velho",out.width="55%"}
+```{r echo=FALSE,eval=TRUE,fig.cap="Referência de velho. Para quem quiser saber mais sobre a novela, [veja aqui](https://pt.wikipedia.org/wiki/O_Clone)",out.width="55%"}
 knitr::include_graphics("figuras/o-clone.jpeg")
 ```
 
@@ -32,7 +32,7 @@ Para que nosso repositório local esteja ligado ao nosso repositório remoto pre
 
 Para clonar vá até o repositório remoto de interesse, e copie a chave https, como mostrado na figura a seguir:
 
-```{r echo=FALSE,eval=TRUE}
+```{r echo=FALSE,eval=TRUE,fig.cap="Copiando a chave https: um dos protocolos para conectar seu repositório local ao remoto"}
 knitr::include_graphics("figuras/github-copy-https.png")
 ```
 
@@ -56,9 +56,10 @@ knitr::include_graphics("figuras/github-versioncontrol-option.png")
 knitr::include_graphics("figuras/github-paste-https.png")
 ```
 
-Ao clicar em `Create project` o repositório remoto será imediatamente transferido para o seu computador. Uma pasta (o diretório local) será criado no local que você escolheu e, assim, RStudio, Git e Github estarão plenamente conectados. Tudo certo até aqui? Uma pausa para descanso com um vídeo.
+Ao clicar em `Create project` o repositório remoto será imediatamente transferido para o seu computador. Uma pasta (o diretório local) será criado no local que você escolheu e, assim, RStudio, Git e Github estarão plenamente conectados. Tudo certo até aqui? 
+    Deixo um vídeo rápido que trata da importância da reprodutibilidade.
 
-```{r echo=FALSE,eval=TRUE}
+```{r echo=FALSE,eval=TRUE,fig.cap="Um vídeo breve a crise da reprodutibilidade"}
 vembedr::embed_url("https://www.youtube.com/watch?v=j7K3s_vi_1Y")
 ```
 
@@ -66,13 +67,13 @@ vembedr::embed_url("https://www.youtube.com/watch?v=j7K3s_vi_1Y")
 
 Se você chegou até aqui sem erros isso quer dizer que Git e GitHub já estão integrados no RStudio. Portanto, qualquer coisa que fizermos nesta pasta está sendo observado a partir de agora pelo git. Para certirficar-se disso, habilite a visualização de arquivos ocultos no seu computador, você vai notar que na raiz desta pasta clonada existe uma pasta `.git`, como na figura a seguir
 
-```{r echo=FALSE,eval=TRUE}
+```{r echo=FALSE,eval=TRUE,fig.cap="Arquivo de sistema indicando que o git está funcionando no seu diretório"}
 knitr::include_graphics("figuras/git-inside-folder.png")
 ```
 
 Se você consegue ver esta pasta quer dizer que está tudo certo, e o git está observando (**watch** no jargão do versionamento) cada modificação e cada arquivo dentro desta pasta (a menos que você inclua o arquivo no .gitignore, mas isso é assunto para outro momento).
 
-```{r echo=FALSE,eval=TRUE,out.width="55%"}
+```{r echo=FALSE,eval=TRUE,out.width="55%",fig.cap="Git está te observando, mas pra te ajudar"}
 knitr::include_graphics("figuras/big-brother-watching.png")
 ```
 
@@ -84,8 +85,8 @@ O que é um commit?
 
 Commit, ou "revisão", é uma mudança individual em um arquivo ou um conjunto de arquivos dentro da pasta observada pelo git. Os commits são como check-points para o nosso repositório. Uma analogia interessante para os commits foi apresentada na aula e está ilustrada aqui, na figura seguinte
 
-```{r echo=FALSE, eval=FALSE,out.width="60%"}
-knitr::include_graphics(here::here("figuras", "commit-only-concept.png"))
+```{r echo=FALSE, eval=FALSE,out.width="60%",fig.cap="Os commits são um componente chave no versionamento, como destacado nessa ilustração da Allison Horst, são fundamentais para manter a rota de desenvolvimento de um projeto"}
+knitr::include_graphics("figuras/commit-only-concept.png")
 ```
 
 Vamos pensar que nosso projeto é uma montanha, e estamos escalando ele. Nosso objetivo final é, obviamente, finalizar o projeto, chegando ao topo da montanha. A medida que progredimos,caso venhamos a cometer um erro, a queda pode ser grande. Desta maneira, utilizamos grampos onde ancoramos nossa corda a medida que a escalada progride. Em caso de erro, a queda será apenas até o grampo anterior onde a corda foi ancorada. Os commits servem como os clipes que ancoram a corda a medida que progredimos no projeto. Se cometermos um erro em algum arquivo, tudo certo, podemos voltar no commit anterior, ou anteriores, para tentar descobrir onde o erro foi cometido.
@@ -123,7 +124,7 @@ Se quiserem usar seus próprios dados fiquem a vontade, o uso do palmerpenguins
 
 ### Explorando commits
 
-```{r echo=FALSE, eval=TRUE,out.width="70%"}
+```{r echo=FALSE, eval=TRUE,out.width="70%", fig.cap="Commits são essenciais não só para o proprietário do repositório, mas também para auxiliar outras pessoas a compreenderem os caminhos para obtenção dos resultados, como ilustrado nessa figura da Allison Horst"}
 knitr::include_graphics("figuras/commit-safe.png")
 ```
 
