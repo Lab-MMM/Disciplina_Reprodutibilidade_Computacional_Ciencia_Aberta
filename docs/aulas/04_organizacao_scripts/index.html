@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Glossário do versionamento – Reprodutibilidade computacional e principios da ciência aberta</title>
+<title>Nomeando arquivos e organizando scripts – Reprodutibilidade computacional e principios da ciência aberta</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,27 +55,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -301,7 +281,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aulas</li><li class="breadcrumb-item"><a href="../../aulas/05_intro_reprodutibilidade/index.html">Versionamento</a></li><li class="breadcrumb-item"><a href="../../aulas/glossario/index.html">Glossário do versionamento</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aulas</li><li class="breadcrumb-item"><a href="../../aulas/03_organizacao_local_caminhos/index.html">Organização e versionamento</a></li><li class="breadcrumb-item"><a href="../../aulas/04_organizacao_scripts/index.html">Organização de scripts</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -394,13 +374,13 @@ div.csl-indent {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Organização e versionamento</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../aulas/03_organizacao_local_caminhos/index.html" class="sidebar-item-text sidebar-link">
@@ -409,7 +389,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../aulas/04_organizacao_scripts/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../aulas/04_organizacao_scripts/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Organização de scripts</span></a>
   </div>
 </li>
@@ -417,13 +397,13 @@ div.csl-indent {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Versionamento</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../aulas/05_intro_reprodutibilidade/index.html" class="sidebar-item-text sidebar-link">
@@ -468,7 +448,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../aulas/glossario/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../aulas/glossario/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Glossário do versionamento</span></a>
   </div>
 </li>
@@ -509,7 +489,8 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#guia-resumido-de-funções-do-git" id="toc-guia-resumido-de-funções-do-git" class="nav-link active" data-scroll-target="#guia-resumido-de-funções-do-git">Guia resumido de funções do git</a></li>
+  <li><a href="#nomeando-arquivos" id="toc-nomeando-arquivos" class="nav-link active" data-scroll-target="#nomeando-arquivos">Nomeando arquivos</a></li>
+  <li><a href="#nomeando-scripts" id="toc-nomeando-scripts" class="nav-link" data-scroll-target="#nomeando-scripts">Nomeando scripts</a></li>
   </ul>
 </nav>
     </div>
@@ -517,9 +498,9 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aulas</li><li class="breadcrumb-item"><a href="../../aulas/05_intro_reprodutibilidade/index.html">Versionamento</a></li><li class="breadcrumb-item"><a href="../../aulas/glossario/index.html">Glossário do versionamento</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aulas</li><li class="breadcrumb-item"><a href="../../aulas/03_organizacao_local_caminhos/index.html">Organização e versionamento</a></li><li class="breadcrumb-item"><a href="../../aulas/04_organizacao_scripts/index.html">Organização de scripts</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Glossário do versionamento</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Nomeando arquivos e organizando scripts</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -536,58 +517,56 @@ div.csl-indent {
 </header>
 
 
-<p>Uma das maiores dificuldades quando começamos utilizar versionamento em nossos trabalhos é a quantidade de termos técnicos utilizados nessa área. <em>Pull</em>, <em>push</em>, <em>commit</em>, <em>pull request</em>, <em>merge</em>, <em>fast forward</em>, <em>main/origin</em> e por aí vai.</p>
-<p>Por isso, o objetivo dessa seção é compilar um conjunto de termos e seus significados para facilitar o entendimento dos procedimentos de versionamento. Muitos dos significados são retirados do ótimo artigo <a href="https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/2041-210X.14108">Pedro Braga na Methods in Ecology and Evolution</a> (<span class="citation" data-cites="bragaNotJustProgrammers2023">Braga et al. (<a href="#ref-bragaNotJustProgrammers2023" role="doc-biblioref">2023</a>)</span>). Nessa seção você pode encontrar os principais termos utilizados em trabalhos que envolvem versionamento. Para sugestões, correções ou adições de termos abra um <a href=""><em>Issue</em></a> ou submeta um <em>pull request</em>. Os termos estão colocados em inglês pois é a maneira mais comum que vocês irão encontrar na documentação do Git e do GitHub.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Glossário
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>Repository:</strong> Um conjunto de arquivos que é monitorado pelo Git (nossa ferramenta de versionamento). Os repositórios podem ser tanto remotos quanto locais, dependendo de onde eles estão (respectivamente, em um serviço de hospedagem remoto, como o GitHub ou/e no seu computador)</li>
-<li><strong>Branch:</strong> Representa o caminho de desenvolvimento do projeto. Repositórios podem ter um único, geralmente denominado <em>main</em> ou <em>master</em>, ou múltiplos branches. Esses multiplos branches podem representar caminhos divergentes de um dado projeto (por exemplo, uma modificação em análises, um colaborador que está testando uma mudança em algum aspecto do projeto, etc.). O uso prático dos branches está ilustrado em <a href="">Trabalho colaborativo</a></li>
-<li><strong>Commit:</strong> Função do Git que possibilita registrar “fotografias” que representam diferentes momentos do desenvolvimento do projeto. No versionamento com o Git os commits possibilitam a identificação e o rastreamento das modificações realizadas no repositório. O uso prático do commit está ilustrado em <a href="">ABC do versionamento</a></li>
-<li><strong>Push e Pull:</strong></li>
-<li><strong>Pull request:</strong></li>
-<li><strong>Merge:</strong></li>
-<li><strong>Release:</strong></li>
-<li><strong>Head:</strong> Termo utilizado para representar qual o local atual que você se encontra no histórico de desenvolvimento do seu repositório.</li>
-</ul>
-</div>
-</div>
-</div>
-<section id="guia-resumido-de-funções-do-git" class="level1">
-<h1>Guia resumido de funções do git</h1>
-<p>Aqui você pode encontrar uma pequena cola com algumas das principais funções do git. Este material foi produzido por <a href="https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/">Julia Evans</a></p>
-<div class="cell">
-<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figuras/git-cheat-sheet.png" class="img-fluid figure-img" width="1100"></p>
-<figcaption>cheat-sheet-git</figcaption>
+<p><img src="figuras/xkcd_names_fies.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
+<p>O objetivo dessa seção é proporcionar um brevíssimo compilado de sugestões para nomear arquivos e organizar scripts. Grande parte desse material é baseado no <a href="https://speakerdeck.com/jennybc/how-to-name-files">trabalho da Jenny Bryan</a></p>
+<section id="nomeando-arquivos" class="level2">
+<h2 class="anchored" data-anchor-id="nomeando-arquivos">Nomeando arquivos</h2>
+<p>Uma boa regra a ser seguida:</p>
+<p><strong>Human + Machine redable + ordenado</strong></p>
+<p>Em suma, ao nomear arquivos o ideal é que eles sejam possíveis de serem lidos por máquinas, humanos e que denotem uma ordem lógica de execução.</p>
+<p>Por “serem lidos por máquinas” queremos dizer que se tratam de nomes de arquivos estruturados de tal forma que <strong>um computador poderia processar automáticamente</strong>, Para tanto, algumas regras são importantes serem seguidas:</p>
+<ul>
+<li>Pense em expressões regulares, por exemplo, vamos supor que temos um conjunto de polígonos espaciais que representam a distribuição de diferentes espécies (como, por exemplo, os dados baixados da IUCN). Essa lista de polígonos segue o padrão <code>genero_especie.extencao</code>. Queremos listar apenas os polígonos das espécies do gênero Rhea. Podemos usar algo do tipo:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># suponha que seus arquivos estejam na pasta data, que por sua vez está em um projeto</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>), <span class="at">pattern =</span> <span class="st">"Rhea"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
+<ul>
+<li><p>Evite caracteres especiais, espaços, pontuações ou acentuações. Estes caracteres dificultam ou até mesmo impedem a leitura automática por máquinas</p></li>
+<li><p>Use delimitadores para separação de termos nos nomes dos arquivos, por exemplo <code>_</code> ou <code>-</code></p></li>
+<li><p>Use a filosofia “<em>embrace the slug</em>”, ou seja, os nomes dos arquivos também denotam o conteúdo do arquivo Exemplo:</p></li>
+</ul>
+<ul>
+<li>Apresentam uma ordem. A imagem anterior também ilustra bem essa lógica. Os arquivos são enumerados de modo a representar uma sequência de uso dos scripts. Isso facilita a compreensão da maneira como o diretório funciona</li>
+</ul>
+</section>
+<section id="nomeando-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="nomeando-scripts">Nomeando scripts</h2>
+<p>Pessoalmente eu utilizo o seguinte esquema</p>
+<p><strong>número_letra-maiúscula_descrição.R</strong></p>
+<ul>
+<li><p>número: usado para indicar a sequência de execução dos scripts</p></li>
+<li><p>letra maiúscula: Código que indica o que o script faz. Uso a seguinte notação</p>
+<ul>
+<li><code>C</code> (Clean) leitura e limpeza/processamento de dados</li>
+<li><code>D</code> (Do) análises</li>
+<li><code>S</code> (Show) gráficos/figuras</li>
+</ul></li>
+<li><p>descrição: uma breve descrição sobre o que o script faz especificamente (e.g.&nbsp;glm)</p></li>
+</ul>
 
 
 <!-- -->
 
-
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-bragaNotJustProgrammers2023" class="csl-entry" role="listitem">
-Braga, Pedro Henrique Pereira, Katherine Hébert, Emma J. Hudgins, Eric R. Scott, Brandon P. M. Edwards, Luna L. Sánchez Reyes, Matthew J. Grainger, et al. 2023. <span>“Not Just for Programmers: <span>How</span> <span>GitHub</span> Can Accelerate Collaborative and Reproducible Research in Ecology and Evolution.”</span> <em>Methods in Ecology and Evolution</em> n/a (n/a). <a href="https://doi.org/10.1111/2041-210X.14108">https://doi.org/10.1111/2041-210X.14108</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1051,66 +1030,81 @@ Braga, Pedro Henrique Pereira, Katherine Hébert, Emma J. Hudgins, Eric R. Scott
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Glossário do versionamento"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    code-copy: true</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">      source: true</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">      toggle: true # Opcional: esconde o botão de ocultar/mostrar códigos se não quiser</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> references.bib</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Uma das maiores dificuldades quando começamos utilizar versionamento</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    em nossos trabalhos é a quantidade de termos técnicos utilizados</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    nessa área. *Pull*, *push*, *commit*, *pull request*, *merge*, *fast forward*,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    *main/origin* e por aí vai. </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Por isso, o objetivo dessa seção é compilar um conjunto de termos e seus </span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    significados para facilitar o entendimento dos procedimentos de versionamento.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Muitos dos significados são retirados do ótimo artigo [Pedro Braga na Methods</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/2041-210X.14108) (@bragaNotJustProgrammers2023).</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    Nessa seção você pode encontrar os principais termos utilizados em trabalhos</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    que envolvem versionamento. Para sugestões, correções ou adições de termos</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    abra um <span class="co">[</span><span class="ot">*Issue*</span><span class="co">]()</span> ou submeta um *pull request*. Os termos estão colocados</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    em inglês pois é a maneira mais comum que vocês irão encontrar na documentação</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    do Git e do GitHub.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossário</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Repository:** Um conjunto de arquivos que é monitorado pelo Git (nossa</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    ferramenta de versionamento). Os repositórios podem ser tanto remotos </span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    quanto locais, dependendo de onde eles estão (respectivamente, em um </span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    serviço de hospedagem remoto, como o GitHub ou/e no seu computador)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Branch:** Representa o caminho de desenvolvimento do projeto. Repositórios</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    podem ter um único, geralmente denominado *main* ou *master*, ou múltiplos</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    branches. Esses multiplos branches podem representar caminhos divergentes de</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    um dado projeto (por exemplo, uma modificação em análises, um colaborador</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    que está testando uma mudança em algum aspecto do projeto, etc.). O uso </span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    prático dos branches está ilustrado em <span class="co">[</span><span class="ot">Trabalho colaborativo</span><span class="co">]()</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Commit:** Função do Git que possibilita registrar "fotografias" que representam</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    diferentes momentos do desenvolvimento do projeto. No versionamento com o </span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    Git os commits possibilitam a identificação e o rastreamento das modificações</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    realizadas no repositório. O uso prático do commit está ilustrado em </span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="co">[</span><span class="ot">ABC do versionamento</span><span class="co">]()</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Push e Pull:**</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Pull request:**</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Merge:** </span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Release:**</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Head:** Termo utilizado para representar qual o local atual que você se</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    encontra no histórico de desenvolvimento do seu repositório. </span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu"># Guia resumido de funções do git</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>Aqui você pode encontrar uma pequena cola com algumas das principais funções</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    do git. Este material foi produzido por <span class="co">[</span><span class="ot">Julia Evans</span><span class="co">](https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/)</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE,eval=TRUE,fig.cap="cheat-sheet-git"}</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figuras/git-cheat-sheet.png"</span>)</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Nomeando arquivos e organizando scripts"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">    code-copy: true</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">      source: true</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">      toggle: true # Opcional: esconde o botão de ocultar/mostrar códigos se não quiser</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="al">![](figuras/xkcd_names_fies.png)</span>{fig-align="center" width="40%"}</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>O objetivo dessa seção é proporcionar um brevíssimo compilado de sugestões para nomear arquivos e organizar scripts. Grande parte desse material é baseado no <span class="co">[</span><span class="ot">trabalho da Jenny Bryan</span><span class="co">](https://speakerdeck.com/jennybc/how-to-name-files)</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Nomeando arquivos</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>Uma boa regra a ser seguida:</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>**Human + Machine redable + ordenado**</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>Em suma, ao nomear arquivos o ideal é que eles sejam possíveis de serem lidos por</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    máquinas, humanos e que denotem uma ordem lógica de execução.</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>Por "serem lidos por máquinas" queremos dizer que se tratam de nomes de arquivos</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    estruturados de tal forma que **um computador poderia processar automáticamente**,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    Para tanto, algumas regras são importantes serem seguidas:</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pense em expressões regulares, por exemplo, vamos supor que temos um conjunto de</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    polígonos espaciais que representam a distribuição de diferentes espécies </span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    (como, por exemplo, os dados baixados da IUCN). Essa lista de polígonos segue o</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    padrão <span class="in">`genero_especie.extencao`</span>. Queremos listar apenas os polígonos das espécies</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    do gênero Rhea. Podemos usar algo do tipo:</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=TRUE,eval=FALSE}</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># suponha que seus arquivos estejam na pasta data, que por sua vez está em um projeto</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>), <span class="at">pattern =</span> <span class="st">"Rhea"</span>)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Evite caracteres especiais, espaços, pontuações ou acentuações. Estes caracteres</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    dificultam ou até mesmo impedem a leitura automática por máquinas</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use delimitadores para separação de termos nos nomes dos arquivos, por exemplo</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>   <span class="in">`_`</span> ou <span class="in">`-`</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use a filosofia "*embrace the slug*", ou seja, os nomes dos arquivos também</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>   denotam o conteúdo do arquivo</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>   Exemplo:</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE,eval=FALSE}</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figuras/naming_slug.png"</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span>  </span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Apresentam uma ordem. A imagem anterior também ilustra bem essa lógica. </span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>   Os arquivos são enumerados de modo a representar uma sequência de uso </span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>   dos scripts. Isso facilita a compreensão da maneira como o diretório </span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>   funciona</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Nomeando scripts</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>Pessoalmente eu utilizo o seguinte esquema</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>**número_letra-maiúscula_descrição.R**</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>número: usado para indicar a sequência de execução dos scripts</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>letra maiúscula: Código que indica o que o script faz. Uso a seguinte notação</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`C`</span> (Clean) leitura e limpeza/processamento de dados</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`D`</span> (Do) análises</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`S`</span> (Show) gráficos/figuras</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>descrição: uma breve descrição sobre o que o script faz especificamente</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    (e.g. glm)</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

@@ -37,23 +37,21 @@ website:
         - section: "Introdução a ciência aberta"
           contents:
           - text: "Introdução a Ciência Aberta"
-            href: aulas/ciencia_aberta/index.qmd
+            href: aulas/01_ciencia_aberta/index.qmd
           - text: "Dados abertos"
-            href: aulas/dados_abertos/index.qmd
-        - section: "Organização"
+            href: aulas/02_dados_abertos/index.qmd
+        - section: "Organização e versionamento"
           contents:
-          - text: "Conhecendo sua máquina - caminhos para arquivos"
-            href: aulas/organizacao_local_caminhos/index.qmd
           - text: "Organização do diretório de trabalho local"
-            href: aulas/aula1_phylogenetic_trees/index.qmd
+            href: aulas/03_organizacao_local_caminhos/index.qmd
           - text: "Organização de scripts"
-            href: aulas/aula1_phylogenetic_trees/index.qmd
+            href: aulas/04_organizacao_scripts/index.qmd
         - section: "Versionamento"
           contents: 
           - text: "Ferramentas para controle de versão"
-            href: aulas/aula0_intro_reprodutibilidade/index.qmd
+            href: aulas/05_intro_reprodutibilidade/index.qmd
           - text: "Introdução ao controle de versão"
-            href: aulas/aula1_git_github_basics/index.qmd
+            href: aulas/06_git_github_basics/index.qmd
           - text: "Viajando no tempo"
             href: aulas/aula3_descricao-padroes_II/index.qmd
           - text: "Trabalho colaborativo - branches, forks, pull requests, issues"

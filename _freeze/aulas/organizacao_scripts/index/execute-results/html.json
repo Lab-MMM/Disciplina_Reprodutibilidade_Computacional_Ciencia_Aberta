@@ -1,0 +1,15 @@
+{
+  "hash": "b6426434f2d761b101c9dab8a34e08a0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Nomeando arquivos e organizando scripts\"\nformat:\n  html:\n    code-copy: true\n    code-tools:\n      source: true\n      toggle: true # Opcional: esconde o botão de ocultar/mostrar códigos se não quiser\n---\n\n![](figuras/xkcd_names_fies.png){fig-align=\"center\" width=\"40%\"}\n\nO objetivo dessa seção é proporcionar um brevíssimo compilado de sugestões para nomear arquivos e organizar scripts. Grande parte desse material é baseado no [trabalho da Jenny Bryan](https://speakerdeck.com/jennybc/how-to-name-files)\n\n## Nomeando arquivos\n\nUma boa regra a ser seguida:\n\n**Human + Machine redable + ordenado**\n\nEm suma, ao nomear arquivos o ideal é que eles sejam possíveis de serem lidos por\n    máquinas, humanos e que denotem uma ordem lógica de execução.\n\nPor \"serem lidos por máquinas\" queremos dizer que se tratam de nomes de arquivos\n    estruturados de tal forma que **um computador poderia processar automáticamente**,\n    Para tanto, algumas regras são importantes serem seguidas:\n\n- Pense em expressões regulares, por exemplo, vamos supor que temos um conjunto de\n    polígonos espaciais que representam a distribuição de diferentes espécies \n    (como, por exemplo, os dados baixados da IUCN). Essa lista de polígonos segue o\n    padrão `genero_especie.extencao`. Queremos listar apenas os polígonos das espécies\n    do gênero Rhea. Podemos usar algo do tipo:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# suponha que seus arquivos estejam na pasta data, que por sua vez está em um projeto\n\nfiles <- list.files(path = here::here(\"data\"), pattern = \"Rhea\")\n```\n:::\n\n\n- Evite caracteres especiais, espaços, pontuações ou acentuações. Estes caracteres\n    dificultam ou até mesmo impedem a leitura automática por máquinas\n    \n- Use delimitadores para separação de termos nos nomes dos arquivos, por exemplo\n   `_` ou `-`\n\n- Use a filosofia \"*embrace the slug*\", ou seja, os nomes dos arquivos também\n   denotam o conteúdo do arquivo\n   Exemplo:\n\n\n::: {.cell}\n\n:::\n\n\n- Apresentam uma ordem. A imagem anterior também ilustra bem essa lógica. \n   Os arquivos são enumerados de modo a representar uma sequência de uso \n   dos scripts. Isso facilita a compreensão da maneira como o diretório \n   funciona\n\n## Nomeando scripts\n\nPessoalmente eu utilizo o seguinte esquema\n\n**número_letra-maiúscula_descrição.R**\n\n-   número: usado para indicar a sequência de execução dos scripts\n\n-   letra maiúscula: Código que indica o que o script faz. Uso a seguinte notação\n\n    -   `C` (Clean) leitura e limpeza/processamento de dados\n    -   `D` (Do) análises\n    -   `S` (Show) gráficos/figuras\n\n-   descrição: uma breve descrição sobre o que o script faz especificamente\n    (e.g. glm)\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
