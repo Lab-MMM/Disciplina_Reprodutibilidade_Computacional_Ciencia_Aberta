@@ -20,7 +20,7 @@ Nesta seção iremos explorar um pouco mais o poder que os commits nos oferecem,
 
 Sempre ao fazer commits vale lembrar dessas palavras:
 
-```{r echo=FALSE, eval=TRUE,out.width="70%"}
+```{r echo=FALSE, eval=TRUE,out.width="70%",fig.cap="Commits auxiliam você e outras pessoas navegarem através dos caminhos que levaram a construção de um repositório"}
 knitr::include_graphics("figuras/commit-safe.png")
 ```
 
@@ -128,10 +128,24 @@ Você pode abrir o arquivo no estado em que ele se encontrava em um dado commit 
 knitr::include_graphics("figuras/git-history-file.png")
 ```
 
+Note que o histórico mostra apenas as modificações realizadas no arquivo referente
+   ao commit específico, porém não mostra o arquivo naquele momento. Caso você 
+   queira visualizar o arquivo completo naquele momento você deve clicar no
+   botão na extrema direita `View file @xxxx`. Os números e letras após o `@`
+   correspondem aos oito primeiros identificadores da chave SHA única de cada
+   commit.
+   
+```{r echo=FALSE, eval=TRUE,out.width="70%",fig.cap="Destaque para a função View que possibilita visualizar o arquivo completo no momento daquele commit"}
+knitr::include_graphics("figuras/github-history-view-file.png")
+```
+
+::: {callout-tip}
+
 ## Atividade
-
-Explore um pouco os commits que realizaram. Abra a página do github e também através do Rstudio, veja as diferenças, as vantangens e desvantagens de cada uma das abordagens
-
+Explore um pouco os commits que realizaram. Abra a página do GitHub e também 
+    o Review Changes do Rstudio, veja as diferenças, as vantangens e desvantagens
+    de cada uma das abordagens
+:::
 
 ## Throwback Commit
 
@@ -141,7 +155,6 @@ Vamos supor que realizamos um commit errado, e agora queremos voltar ao commit a
 # Inutilidades públicas necessárias
 
 No fim do dia, aprendemos fazer commits apenas para utilizar essa ferramenta [aqui](https://starlogs.dev/). Cole o link de seu repositório contendo alguns commits e veja o que acontece
-
 
 
 # Slides

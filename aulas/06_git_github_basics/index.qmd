@@ -92,15 +92,34 @@ Vamos pensar que nosso projeto é uma montanha, e estamos escalando ele. Nosso o
 
 Da mesma forma que na escalada, se utilizarmos clipes muito pertinhos uns dos outros vamos ficar lentos demais, e o progresso até o topo será comprometido, se fizermos muitos commits será difícil voltar em momentos específicos do projeto, visto que terão muitos commits para serem checados. Portanto, a regra é: faça commits com parcimonia, ou seja, nem muitos, nem poucos.
 
-Vamos fazer uma modificação na nossa pasta. Podemos adicionar arquivos, já que ela está vazia. Para tanto vamos usar os arquivos do pacote de dados palmer penguins que estão nesse repositório. Lembre-se de ler os arquivos utilizando o `{here}` e utilizar o Rproject para abrir o diretório
+Apesar do conteúdo do commit variar muito existem algumas sugestões de boas práticas
+    que podem ser seguidas para escrever o commit. Uma sugestão retirada do site 
+    do [Lucas Caton](https://www.lucascaton.com/pt-BR/2017/10/16/como-escrever-mensagens-de-commits-no-git) e que pode ajudar na hora de escrever seus commits é sempre pensar
+    em completar essa frase para seu commit:
+    
+  > Se aplicado, esse commit irá `sua mensagem de commit aqui`
+  
+Note que, mais importante que "como" é "o que foi feito".
+
+#### Praticando
+
+Vamos fazer uma modificação na nossa pasta. Podemos adicionar arquivos, já que ela está
+    vazia. Para aqueles que não tem dados ainda, podem utilizar os arquivos do pacote
+    de dados palmer penguins que estão nesse repositório. Lembre-se de ler os arquivos
+    utilizando o `{here}` e utilizar o Rproject para abrir o diretório.
 
 ```{r echo=TRUE,eval=FALSE}
 data_penguins <- read.csv(here::here("data", "data-penguins.csv")) 
 ```
 
-**Obs** se quiserem usar seus próprios dados fiquem a vontade, o uso do palmerpenguins é apenas opcional e a título de procedimento didático.
+::: {.callout-note}
+## Trabalhe com seus próprios dados
 
-Caso estejam trabalhando com seus próprios dados, jogue os arquivos para dentro do diretório que clonamos. O próximo passo é fazer nosso primeiro commit.
+Se quiserem usar seus próprios dados fiquem a vontade, o uso do palmerpenguins 
+    é apenas opcional e a título de procedimento didático. Caso estejam trabalhando
+    com seus próprios dados, jogue os arquivos para dentro do diretório que clonamos.
+    O próximo passo é fazer nosso primeiro commit.
+:::
 
 ### Explorando commits
 
@@ -207,4 +226,3 @@ Aqui você encontra os slides apresentados em aula sobre esse tópico
 ```{=html}
 <iframe class="slide-deck" src="slides.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
-

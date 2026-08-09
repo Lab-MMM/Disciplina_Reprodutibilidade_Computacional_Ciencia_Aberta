@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Gabriel Nakamura">
 
-<title>Glossário do versionamento – Reprodutibilidade computacional e principios da ciência aberta</title>
+<title>Viajando no tempo – Reprodutibilidade computacional e principios da ciência aberta</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,27 +56,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -301,7 +282,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aulas</li><li class="breadcrumb-item"><a href="../../aulas/05_intro_reprodutibilidade/index.html">Versionamento</a></li><li class="breadcrumb-item"><a href="../../aulas/glossario/index.html">Glossário do versionamento</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aulas</li><li class="breadcrumb-item"><a href="../../aulas/05_intro_reprodutibilidade/index.html">Versionamento</a></li><li class="breadcrumb-item"><a href="../../aulas/07_navegando_versoes/index.html">Viajando no tempo</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -438,7 +419,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../aulas/07_navegando_versoes/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../aulas/07_navegando_versoes/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Viajando no tempo</span></a>
   </div>
 </li>
@@ -468,7 +449,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../aulas/glossario/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../aulas/glossario/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Glossário do versionamento</span></a>
   </div>
 </li>
@@ -509,7 +490,17 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#guia-resumido-de-funções-do-git" id="toc-guia-resumido-de-funções-do-git" class="nav-link active" data-scroll-target="#guia-resumido-de-funções-do-git">Guia resumido de funções do git</a></li>
+  <li><a href="#apresentação" id="toc-apresentação" class="nav-link active" data-scroll-target="#apresentação">Apresentação</a></li>
+  <li><a href="#workflow-para-os-commits" id="toc-workflow-para-os-commits" class="nav-link" data-scroll-target="#workflow-para-os-commits">Workflow para os commits</a>
+  <ul class="collapse">
+  <li><a href="#amend" id="toc-amend" class="nav-link" data-scroll-target="#amend">Amend</a></li>
+  <li><a href="#viajando-entre-commits" id="toc-viajando-entre-commits" class="nav-link" data-scroll-target="#viajando-entre-commits">Viajando entre commits</a></li>
+  <li><a href="#elementos-importantes-do-commit" id="toc-elementos-importantes-do-commit" class="nav-link" data-scroll-target="#elementos-importantes-do-commit">Elementos importantes do commit</a></li>
+  <li><a href="#atividade" id="toc-atividade" class="nav-link" data-scroll-target="#atividade">Atividade</a></li>
+  <li><a href="#throwback-commit" id="toc-throwback-commit" class="nav-link" data-scroll-target="#throwback-commit">Throwback Commit</a></li>
+  </ul></li>
+  <li><a href="#inutilidades-públicas-necessárias" id="toc-inutilidades-públicas-necessárias" class="nav-link" data-scroll-target="#inutilidades-públicas-necessárias">Inutilidades públicas necessárias</a></li>
+  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
   </ul>
 </nav>
     </div>
@@ -517,15 +508,22 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aulas</li><li class="breadcrumb-item"><a href="../../aulas/05_intro_reprodutibilidade/index.html">Versionamento</a></li><li class="breadcrumb-item"><a href="../../aulas/glossario/index.html">Glossário do versionamento</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aulas</li><li class="breadcrumb-item"><a href="../../aulas/05_intro_reprodutibilidade/index.html">Versionamento</a></li><li class="breadcrumb-item"><a href="../../aulas/07_navegando_versoes/index.html">Viajando no tempo</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Glossário do versionamento</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Viajando no tempo</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Histórico de versões</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gabriel Nakamura </p>
+          </div>
+  </div>
     
   
     
@@ -536,58 +534,141 @@ div.csl-indent {
 </header>
 
 
-<p>Uma das maiores dificuldades quando começamos utilizar versionamento em nossos trabalhos é a quantidade de termos técnicos utilizados nessa área. <em>Pull</em>, <em>push</em>, <em>commit</em>, <em>pull request</em>, <em>merge</em>, <em>fast forward</em>, <em>main/origin</em> e por aí vai.</p>
-<p>Por isso, o objetivo dessa seção é compilar um conjunto de termos e seus significados para facilitar o entendimento dos procedimentos de versionamento. Muitos dos significados são retirados do ótimo artigo <a href="https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/2041-210X.14108">Pedro Braga na Methods in Ecology and Evolution</a> (<span class="citation" data-cites="bragaNotJustProgrammers2023">Braga et al. (<a href="#ref-bragaNotJustProgrammers2023" role="doc-biblioref">2023</a>)</span>). Nessa seção você pode encontrar os principais termos utilizados em trabalhos que envolvem versionamento. Para sugestões, correções ou adições de termos abra um <a href=""><em>Issue</em></a> ou submeta um <em>pull request</em>. Os termos estão colocados em inglês pois é a maneira mais comum que vocês irão encontrar na documentação do Git e do GitHub.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Glossário
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>Repository:</strong> Um conjunto de arquivos que é monitorado pelo Git (nossa ferramenta de versionamento). Os repositórios podem ser tanto remotos quanto locais, dependendo de onde eles estão (respectivamente, em um serviço de hospedagem remoto, como o GitHub ou/e no seu computador)</li>
-<li><strong>Branch:</strong> Representa o caminho de desenvolvimento do projeto. Repositórios podem ter um único, geralmente denominado <em>main</em> ou <em>master</em>, ou múltiplos branches. Esses multiplos branches podem representar caminhos divergentes de um dado projeto (por exemplo, uma modificação em análises, um colaborador que está testando uma mudança em algum aspecto do projeto, etc.). O uso prático dos branches está ilustrado em <a href="">Trabalho colaborativo</a></li>
-<li><strong>Commit:</strong> Função do Git que possibilita registrar “fotografias” que representam diferentes momentos do desenvolvimento do projeto. No versionamento com o Git os commits possibilitam a identificação e o rastreamento das modificações realizadas no repositório. O uso prático do commit está ilustrado em <a href="">ABC do versionamento</a></li>
-<li><strong>Push e Pull:</strong></li>
-<li><strong>Pull request:</strong></li>
-<li><strong>Merge:</strong></li>
-<li><strong>Release:</strong></li>
-<li><strong>Head:</strong> Termo utilizado para representar qual o local atual que você se encontra no histórico de desenvolvimento do seu repositório.</li>
-</ul>
-</div>
-</div>
-</div>
-<section id="guia-resumido-de-funções-do-git" class="level1">
-<h1>Guia resumido de funções do git</h1>
-<p>Aqui você pode encontrar uma pequena cola com algumas das principais funções do git. Este material foi produzido por <a href="https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/">Julia Evans</a></p>
+<section id="apresentação" class="level1">
+<h1>Apresentação</h1>
+<p>Nesta seção iremos explorar um pouco mais o poder que os commits nos oferecem, incluindo boas práticas para fazer commits nos nossos arquivos e como “viajar” entre commits passados. Este momento também servirá para ficarmos um pouco mais familiarizados com o uso do Git através do terminal. Vamos utilizar o teminal visto que algumas coisas que faremos aqui não podem ser feitas através do RStudio.</p>
+<p>Sempre ao fazer commits vale lembrar dessas palavras:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figuras/git-cheat-sheet.png" class="img-fluid figure-img" width="1100"></p>
-<figcaption>cheat-sheet-git</figcaption>
+<p><img src="figuras/commit-safe.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Commits auxiliam você e outras pessoas navegarem através dos caminhos que levaram a construção de um repositório</figcaption>
 </figure>
 </div>
 </div>
 </div>
+<p>Os commits podem ser pensados como sendo fotografias tiradas do seu repositório em diferentes momentos do tempo. Essas fotografias contém não só o estado do seu repositório naquele momento, mas também uma série de informações adicionais como o autor do commit, o dia e a hora que ele foi realizado, entre outros. Os commits são uma ferramenta poderosa para que possamos navegar no processo de estruturação do nosso repositório e do nosso projeto ao longo do tempo</p>
+<p>Outra forma de entender a utilidade dos commits é através de pontos de segurança do desenvolvimento do seu projeto, de modo que, se algo que não é desejado acontece os commits podem funcionar como pontos de ancoragem do seu trabalho, de modo que você sempre pode voltar para algum ponto de maneira segura.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figuras/commit-safe-2.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Commits podem ser entendidos como costuras em uma escalada</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="workflow-para-os-commits" class="level1">
+<h1>Workflow para os commits</h1>
+<p>Em primeiro lugar sempre cheque se está tudo certo com seu repositório, se seu trabalho local está sincronizado com seu trabalho remoto. Para tanto pode digitar na linha de comando do terminal</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Se sua <em>working tree</em> estiver no status <em>clean</em>, quer dizer que você está sincronizada com o <em>origin</em></p>
+<p>Faça algumas modificações e depois vamos fazer a mesma sequencia de ações que fizemos anteriormente (stage, commit, push), mas agora usando a linha de comando. Para tanto podemos fazer assim</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git add .</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"uma mensagem informativa"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>git push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Pronto, fizemos a mesma coisa que anteriormente em aulas passadas, mas agora utilizando o terminal :)</p>
+<section id="amend" class="level2">
+<h2 class="anchored" data-anchor-id="amend">Amend</h2>
+<p>Lembra que muitos commits podem te deixar muito lento na escalada? E poucos commits podem ser pouco informativos caso queira reconstruir o que aconteceu com o repositório? Pois então, existe uma estratégia interessante para realizar commits, chamada de <code>amend</code></p>
+<p>Em um amend nós basicamente adicionamos um commit a um outro já existente. Por exemplo, imagine que fez apenas algumas poucas modificações de código que não necessitam necessariamente de um commit dedicada exclusivamente para tais, você pode fazer o seguinte:</p>
+<p>1 - stage o arquivo que modificou</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git add path<span class="sc">/</span>to<span class="sc">/</span>file</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>2 - faça um commit</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"WIP"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Note que coloquei <strong>WIP</strong> neste commit, por que? WIP é uma sigla usada comumente no versionamento para Working In Progress. Sempre que tiver um commit desse quer dizer que o commit que fez ainda está sendo trabalhado.</p>
+<p>Ainda não faça o push. Faça mais algumas modificações, e, digamos que agora fez modificações relevantes no código que merecem um commit dedicado. Mas lembre-se que o último commit é um WIP. O que fazemos agora é um amend ao WIP</p>
+<p>3 - faça um amend</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">--</span>amend <span class="sc">-</span>m <span class="st">"Aqui um commit com uma mensagem informativa, como sempre"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>git push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Pronto, agora temos uma mensagem informativa que foi adicionada ao WIP e não precisamos fazer um push do passo intermediário (WIP), deixando nossa escalada mais rápida</p>
+</section>
+<section id="viajando-entre-commits" class="level2">
+<h2 class="anchored" data-anchor-id="viajando-entre-commits">Viajando entre commits</h2>
+<p>Uma das maiores potencialidades dos commits é a possibilidade que podemos navegar entre commits. Ou seja, podemos navegar entre estados distintos do nosso trabalho a medida que ele é desenvolvido. Podemos checar esse histórico tanto na nossa página do repositório no GitHub quanto usando o RStudio, como mostrado na imagem a seguir</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="figuras/github-history.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Para tanto você precisa apenas abrir a aba do Git no RStudio, como vimos anteriormente, e clicar em <strong>History</strong> no canto superior esquerdo da janela de revisões. Tudo o que vemos são todos os commits que foram realizados desde que esse repositório foi formado pela primeira vez.</p>
+</section>
+<section id="elementos-importantes-do-commit" class="level2">
+<h2 class="anchored" data-anchor-id="elementos-importantes-do-commit">Elementos importantes do commit</h2>
+<p>Alguns elementos presentes no commit são importantes. O principal deles é a chave SHA-1. Esta se trata de um identificador único do commit. Com ela podemos viajar entre commits, ou referenciar um dado commit em uma discussão no github. Por exemplo, supondo que estamos trabalhando colaborativamente (como nesse site :)), e eu gostei particularmente mais da versão do site que está há alguns commits atrás. Uma opção é abrir uma Issue (veremos isso mais tarde), e referenciar esse número. Ou simplesmente dizer para meu colaborador “Ei! dê uma olhada no commit número XXXXXX”. Na imagem abaixo está em destaque a chave SHA.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="figuras/git-sha-key.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Você pode abrir o arquivo no estado em que ele se encontrava em um dado commit clicando no arquivo modificado naquele commit selecionado. Por exemplo, digamos que eu queira ver o arquivo chamado <code>rmarkdown-basics</code> deste site editado dia 02 de Agosto, só precisamos clicar no arquivo, como mostrado na imagem abaixo:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="figuras/git-history-file.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Note que o histórico mostra apenas as modificações realizadas no arquivo referente ao commit específico, porém não mostra o arquivo naquele momento. Caso você queira visualizar o arquivo completo naquele momento você deve clicar no botão na extrema direita <code>View file @xxxx</code>. Os números e letras após o <code>@</code> correspondem aos oito primeiros identificadores da chave SHA única de cada commit.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figuras/github-history-view-file.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Destaque para a função View que possibilita visualizar o arquivo completo no momento daquele commit</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="atividade" class="level2 {callout-tip}">
+<h2 class="anchored" data-anchor-id="atividade">Atividade</h2>
+<p>Explore um pouco os commits que realizaram. Abra a página do GitHub e também o Review Changes do Rstudio, veja as diferenças, as vantangens e desvantagens de cada uma das abordagens</p>
+</section>
+<section id="throwback-commit" class="level2">
+<h2 class="anchored" data-anchor-id="throwback-commit">Throwback Commit</h2>
+<p>Vamos supor que realizamos um commit errado, e agora queremos voltar ao commit anterior, mas sem perder o trabalho que fizemos nos arquivos. Para isso podemos usar a abordagem anterior, navegando entre os arquivos e selecionando o arquivo que queremos em um determinado estado, substituimos pelo arquivo atual e fazemos um novo commit. Esta opção pode ser a mais segura se estamos começando a mexer no versionamento. Outra opção é explorar as funções do git chamadas <code>reset</code>. As funções reset basicamente move o HEAD do seu diretório para um commit no passado. Esta abordagem pode causar algumas dores de cabeça no início, portanto recomendo usa-lá com cautela. Para mais informações sobre isso dê uma olhada <a href="https://devconnected.com/how-to-git-reset-to-head/#:~:text=To%20hard%20reset%20files%20to,option%20and%20specify%20the%20HEAD.&amp;text=The%20purpose%20of%20the%20%E2%80%9Cgit,before%20HEAD%20and%20so%20on">nesse site</a>.)</p>
+</section>
+</section>
+<section id="inutilidades-públicas-necessárias" class="level1">
+<h1>Inutilidades públicas necessárias</h1>
+<p>No fim do dia, aprendemos fazer commits apenas para utilizar essa ferramenta <a href="https://starlogs.dev/">aqui</a>. Cole o link de seu repositório contendo alguns commits e veja o que acontece</p>
+</section>
+<section id="slides" class="level1">
+<h1>Slides</h1>
+<p>Aqui você encontra os slides apresentados em aula sobre esse tópico</p>
+<p><a href="../../aulas/07_navegando_versoes/slides.html">Tela cheia 📺</a></p>
+<iframe class="slide-deck" src="slides.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 
 
 <!-- -->
 
-
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-bragaNotJustProgrammers2023" class="csl-entry" role="listitem">
-Braga, Pedro Henrique Pereira, Katherine Hébert, Emma J. Hudgins, Eric R. Scott, Brandon P. M. Edwards, Luna L. Sánchez Reyes, Matthew J. Grainger, et al. 2023. <span>“Not Just for Programmers: <span>How</span> <span>GitHub</span> Can Accelerate Collaborative and Reproducible Research in Ecology and Evolution.”</span> <em>Methods in Ecology and Evolution</em> n/a (n/a). <a href="https://doi.org/10.1111/2041-210X.14108">https://doi.org/10.1111/2041-210X.14108</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1051,66 +1132,174 @@ Braga, Pedro Henrique Pereira, Katherine Hébert, Emma J. Hudgins, Eric R. Scott
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Glossário do versionamento"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    code-copy: true</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">      source: true</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">      toggle: true # Opcional: esconde o botão de ocultar/mostrar códigos se não quiser</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> references.bib</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Uma das maiores dificuldades quando começamos utilizar versionamento</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    em nossos trabalhos é a quantidade de termos técnicos utilizados</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    nessa área. *Pull*, *push*, *commit*, *pull request*, *merge*, *fast forward*,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    *main/origin* e por aí vai. </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Por isso, o objetivo dessa seção é compilar um conjunto de termos e seus </span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    significados para facilitar o entendimento dos procedimentos de versionamento.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Muitos dos significados são retirados do ótimo artigo [Pedro Braga na Methods</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/2041-210X.14108) (@bragaNotJustProgrammers2023).</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    Nessa seção você pode encontrar os principais termos utilizados em trabalhos</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    que envolvem versionamento. Para sugestões, correções ou adições de termos</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    abra um <span class="co">[</span><span class="ot">*Issue*</span><span class="co">]()</span> ou submeta um *pull request*. Os termos estão colocados</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    em inglês pois é a maneira mais comum que vocês irão encontrar na documentação</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    do Git e do GitHub.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossário</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Repository:** Um conjunto de arquivos que é monitorado pelo Git (nossa</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    ferramenta de versionamento). Os repositórios podem ser tanto remotos </span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    quanto locais, dependendo de onde eles estão (respectivamente, em um </span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    serviço de hospedagem remoto, como o GitHub ou/e no seu computador)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Branch:** Representa o caminho de desenvolvimento do projeto. Repositórios</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    podem ter um único, geralmente denominado *main* ou *master*, ou múltiplos</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    branches. Esses multiplos branches podem representar caminhos divergentes de</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    um dado projeto (por exemplo, uma modificação em análises, um colaborador</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    que está testando uma mudança em algum aspecto do projeto, etc.). O uso </span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    prático dos branches está ilustrado em <span class="co">[</span><span class="ot">Trabalho colaborativo</span><span class="co">]()</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Commit:** Função do Git que possibilita registrar "fotografias" que representam</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    diferentes momentos do desenvolvimento do projeto. No versionamento com o </span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    Git os commits possibilitam a identificação e o rastreamento das modificações</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    realizadas no repositório. O uso prático do commit está ilustrado em </span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="co">[</span><span class="ot">ABC do versionamento</span><span class="co">]()</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Push e Pull:**</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Pull request:**</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Merge:** </span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Release:**</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Head:** Termo utilizado para representar qual o local atual que você se</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    encontra no histórico de desenvolvimento do seu repositório. </span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu"># Guia resumido de funções do git</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>Aqui você pode encontrar uma pequena cola com algumas das principais funções</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    do git. Este material foi produzido por <span class="co">[</span><span class="ot">Julia Evans</span><span class="co">](https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/)</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE,eval=TRUE,fig.cap="cheat-sheet-git"}</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figuras/git-cheat-sheet.png"</span>)</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Viajando no tempo"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Histórico de versões"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Gabriel Nakamura"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">    code-copy: true</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools:</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">      source: true</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">      toggle: true # Opcional: esconde o botão de ocultar/mostrar códigos se não quiser</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Apresentação</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>Nesta seção iremos explorar um pouco mais o poder que os commits nos oferecem,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    incluindo boas práticas para fazer commits nos nossos arquivos e como "viajar"</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    entre commits passados. Este momento também servirá para ficarmos um pouco mais</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    familiarizados com o uso do Git através do terminal. Vamos utilizar o teminal</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    visto que algumas coisas que faremos aqui não podem ser feitas através do RStudio.</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>Sempre ao fazer commits vale lembrar dessas palavras:</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE, eval=TRUE,out.width="70%",fig.cap="Commits auxiliam você e outras pessoas navegarem através dos caminhos que levaram a construção de um repositório"}</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figuras/commit-safe.png"</span>)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>Os commits podem ser pensados como sendo fotografias tiradas do seu repositório</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>   em diferentes momentos do tempo. Essas fotografias contém não só o estado </span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>   do seu repositório naquele momento, mas também uma série de informações</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>   adicionais como o autor do commit, o dia e a hora que ele foi realizado, entre</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>   outros. Os commits são uma ferramenta poderosa para que possamos navegar</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>   no processo de estruturação do nosso repositório e do nosso projeto ao longo</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>   do tempo</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>Outra forma de entender a utilidade dos commits é através de pontos de segurança</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    do desenvolvimento do seu projeto, de modo que, se algo que não é desejado</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    acontece os commits podem funcionar como pontos de ancoragem do seu trabalho, </span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    de modo que você sempre pode voltar para algum ponto de maneira segura.</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE, eval=TRUE,out.width="70%",fig.cap="Commits podem ser entendidos como costuras em uma escalada"}</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figuras/commit-safe-2.png"</span>)</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="fu"># Workflow para os commits </span></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>Em primeiro lugar sempre cheque se está tudo certo com seu repositório, se seu </span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>    trabalho local está sincronizado com seu trabalho remoto. Para tanto pode </span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>    digitar na linha de comando do terminal</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=T,eval=FALSE}</span></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>git status</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>Se sua *working tree* estiver no status *clean*, quer dizer que você está </span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>    sincronizada com o *origin*</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>Faça algumas modificações e depois vamos fazer a mesma sequencia de ações que fizemos anteriormente (stage, commit, push), mas agora usando a linha de comando. Para tanto podemos fazer assim</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=TRUE,eval=FALSE}</span></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>git add .</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"uma mensagem informativa"</span></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>git push</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>Pronto, fizemos a mesma coisa que anteriormente em aulas passadas, mas agora </span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>    utilizando o terminal :)</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="fu">## Amend</span></span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>Lembra que muitos commits podem te deixar muito lento na escalada? E poucos </span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>    commits podem ser pouco informativos caso queira reconstruir o que aconteceu </span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>    com o repositório? Pois então, existe uma estratégia interessante para realizar </span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>    commits, chamada de <span class="in">`amend`</span></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>Em um amend nós basicamente adicionamos um commit a um outro já existente. </span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>    Por exemplo, imagine que fez apenas algumas poucas modificações de código que </span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>    não necessitam necessariamente de um commit dedicada exclusivamente para tais, </span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>    você pode fazer o seguinte:</span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>1 - stage o arquivo que modificou</span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=TRUE,eval=FALSE}</span></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>git add path<span class="sc">/</span>to<span class="sc">/</span>file</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>2 - faça um commit </span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=TRUE,eval=FALSE}</span></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"WIP"</span></span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>Note que coloquei **WIP** neste commit, por que? WIP é uma sigla usada comumente no</span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>    versionamento para Working In Progress. Sempre que tiver um commit desse quer</span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>    dizer que o commit que fez ainda está sendo trabalhado.</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>Ainda não faça o push. Faça mais algumas modificações, e, digamos que agora fez modificações relevantes no código que merecem um commit dedicado. Mas lembre-se que o último commit é um WIP. O que fazemos agora é um amend ao WIP</span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>3 - faça um amend</span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=TRUE,eval=FALSE}</span></span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">--</span>amend <span class="sc">-</span>m <span class="st">"Aqui um commit com uma mensagem informativa, como sempre"</span></span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a>git push</span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>Pronto, agora temos uma mensagem informativa que foi adicionada ao WIP e não precisamos fazer um push do passo intermediário (WIP), deixando nossa escalada mais rápida</span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a><span class="fu">## Viajando entre commits</span></span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>Uma das maiores potencialidades dos commits é a possibilidade que podemos navegar entre commits. Ou seja, podemos navegar entre estados distintos do nosso trabalho a medida que ele é desenvolvido. Podemos checar esse histórico tanto na nossa página do repositório no GitHub quanto usando o RStudio, como mostrado na imagem a seguir</span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE, eval=TRUE,out.width="70%"}</span></span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figuras/github-history.png"</span>)</span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>Para tanto você precisa apenas abrir a aba do Git no RStudio, como vimos anteriormente, e clicar em **History** no canto superior esquerdo da janela de revisões. Tudo o que vemos são todos os commits que foram realizados desde que esse repositório foi formado pela primeira vez.</span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## Elementos importantes do commit</span></span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>Alguns elementos presentes no commit são importantes. O principal deles é a chave SHA-1. Esta se trata de um identificador único do commit. Com ela podemos viajar entre commits, ou referenciar um dado commit em uma discussão no github. Por exemplo, supondo que estamos trabalhando colaborativamente (como nesse site :)), e eu gostei particularmente mais da versão do site que está há alguns commits atrás. Uma opção é abrir uma Issue (veremos isso mais tarde), e referenciar esse número. Ou simplesmente dizer para meu colaborador "Ei! dê uma olhada no commit número XXXXXX". Na imagem abaixo está em destaque a chave SHA.</span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE, eval=TRUE,out.width="70%"}</span></span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figuras/git-sha-key.png"</span>)</span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>Você pode abrir o arquivo no estado em que ele se encontrava em um dado commit clicando no arquivo modificado naquele commit selecionado. Por exemplo, digamos que eu queira ver o arquivo chamado <span class="in">`rmarkdown-basics`</span> deste site editado dia 02 de Agosto, só precisamos clicar no arquivo, como mostrado na imagem abaixo:</span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE, eval=TRUE,out.width="70%"}</span></span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figuras/git-history-file.png"</span>)</span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>Note que o histórico mostra apenas as modificações realizadas no arquivo referente</span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a>   ao commit específico, porém não mostra o arquivo naquele momento. Caso você </span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>   queira visualizar o arquivo completo naquele momento você deve clicar no</span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>   botão na extrema direita <span class="in">`View file @xxxx`</span>. Os números e letras após o <span class="in">`@`</span></span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>   correspondem aos oito primeiros identificadores da chave SHA única de cada</span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a>   commit.</span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE, eval=TRUE,out.width="70%",fig.cap="Destaque para a função View que possibilita visualizar o arquivo completo no momento daquele commit"}</span></span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figuras/github-history-view-file.png"</span>)</span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>::: {callout-tip}</span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a><span class="fu">## Atividade</span></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>Explore um pouco os commits que realizaram. Abra a página do GitHub e também </span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a>    o Review Changes do Rstudio, veja as diferenças, as vantangens e desvantagens</span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>    de cada uma das abordagens</span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a><span class="fu">## Throwback Commit</span></span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a>Vamos supor que realizamos um commit errado, e agora queremos voltar ao commit anterior, mas sem perder o trabalho que fizemos nos arquivos. Para isso podemos usar a abordagem anterior, navegando entre os arquivos e selecionando o arquivo que queremos em um determinado estado, substituimos pelo arquivo atual e fazemos um novo commit. Esta opção pode ser a mais segura se estamos começando a mexer no versionamento. Outra opção é explorar as funções do git chamadas <span class="in">`reset`</span>. As funções reset basicamente move o HEAD do seu diretório para um commit no passado. Esta abordagem pode causar algumas dores de cabeça no início, portanto recomendo usa-lá com cautela. Para mais informações sobre isso dê uma olhada <span class="co">[</span><span class="ot">nesse site</span><span class="co">](https://devconnected.com/how-to-git-reset-to-head/#:~:text=To%20hard%20reset%20files%20to,option%20and%20specify%20the%20HEAD.&amp;text=The%20purpose%20of%20the%20%E2%80%9Cgit,before%20HEAD%20and%20so%20on)</span>.)</span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a><span class="fu"># Inutilidades públicas necessárias</span></span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a>No fim do dia, aprendemos fazer commits apenas para utilizar essa ferramenta <span class="co">[</span><span class="ot">aqui</span><span class="co">](https://starlogs.dev/)</span>. Cole o link de seu repositório contendo alguns commits e veja o que acontece</span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a><span class="fu"># Slides</span></span>
+<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a>Aqui você encontra os slides apresentados em aula sobre esse tópico</span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Tela cheia 📺</span><span class="co">](slides.qmd)</span></span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;iframe class="slide-deck" src="slides.html" height="420" width="750" style="border: 1px solid #2e3846;"&gt;&lt;/iframe&gt;</span></span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
