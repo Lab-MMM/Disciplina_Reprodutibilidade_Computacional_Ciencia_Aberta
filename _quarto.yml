@@ -40,7 +40,7 @@ website:
             href: aulas/01_ciencia_aberta/index.qmd
           - text: "Dados abertos"
             href: aulas/02_dados_abertos/index.qmd
-        - section: "Organização e versionamento"
+        - section: "Organização de diretórios"
           contents:
           - text: "Organização do diretório de trabalho local"
             href: aulas/03_organizacao_local_caminhos/index.qmd
@@ -53,7 +53,7 @@ website:
           - text: "Introdução ao controle de versão"
             href: aulas/06_git_github_basics/index.qmd
           - text: "Viajando no tempo"
-            href: aulas/aula3_descricao-padroes_II/index.qmd
+            href: aulas/07_navegando_versoes/index.qmd
           - text: "Trabalho colaborativo - branches, forks, pull requests, issues"
             href: aulas/aula3_descricao-padroes_II/index.qmd
           - text: "Conflitos e como evitá-los (ou resolvê-los)"

@@ -1,6 +1,6 @@
 ---
-title: "Viajando no tempo"
-subtitle: "explorando commits"
+title: "Introdução ao controle de versão"
+subtitle: ""
 author: "Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos quantitativos"
 
 format: 
@@ -10,27 +10,28 @@ format:
     highlight-style: espresso
 ---
 
-## Controle de versão e repositório remoto: Git, GitHub e RStudio
+## Controle de versão e repositório remoto: Git, GitHub e RStudio 
 
 ![](figuras/funny-git.png){fig-align="center" width="70%"}
 
-## Controle de versão e repositório remoto: Git, GitHub e RStudio
+## Controle de versão e repositório remoto: Git, GitHub e RStudio 
 
 ### O que é Git, GitHub e quais diferenças?
 
-## Controle de versão e repositório remoto: Git, GitHub e RStudio
+## Controle de versão e repositório remoto: Git, GitHub e RStudio 
 
 ::::: columns
 ::: {.column width="50%"}
 ![](figuras/git_logo.png){fig-align="center" width="80%"}
-:::
 
+:::
 ::: {.column width="50%"}
 ![](figuras/github-mark.png){fig-align="center" width="80%"}
+
 :::
 :::::
 
-## Controle de versão e repositório remoto: Git, GitHub e RStudio
+## Controle de versão e repositório remoto: Git, GitHub e RStudio 
 
 ### Git
 
@@ -38,19 +39,21 @@ format:
 
 ::::: columns
 ::: {.column width="50%"}
-![](figuras/git_logo.png){fig-align="center" width="70%"} ![](figuras/Linus_torvald.jpg){fig-align="center" width="50%"}
+![](figuras/git_logo.png){fig-align="center" width="70%"}
+![](figuras/Linus_torvald.jpg){fig-align="center" width="50%"}
 :::
-
 ::: {.column width="50%"}
--   Concebido para grandes projetos colaborativos (Linux)
 
--   Executa todo o controle de versões
+- Concebido para grandes projetos colaborativos (Linux)
 
--   Funciona independente de um repositório remoto
+- Executa todo o controle de versões
+
+- Funciona independente de um repositório remoto 
 :::
 :::::
 
-## Controle de versão e repositório remoto: Git, GitHub e RStudio
+
+## Controle de versão e repositório remoto: Git, GitHub e RStudio 
 
 ### Github
 
@@ -60,57 +63,60 @@ format:
 ::: {.column width="50%"}
 ![](figuras/github-mark.png){fig-align="center" width="80%"}
 :::
-
 ::: {.column width="50%"}
--   Repositório remoto (a nuvem)
 
--   Outros tipos de repositório (ex. Gitlab)
+- Repositório remoto (a nuvem)
 
--   Inúmeras funcionalidades (Vizualização, armazenamento, colaboração etc.)
+- Outros tipos de repositório (ex. Gitlab)
+
+- Inúmeras funcionalidades (Vizualização, armazenamento, colaboração etc.)
 :::
 :::::
 
-## Controle de versão e repositório remoto: Git, GitHub e RStudio
+## Controle de versão e repositório remoto: Git, GitHub e RStudio 
 
 ### Diferenças e usos do Git e GitHub?
 
-## Controle de versão e repositório remoto: Git e GitHub
+
+## Controle de versão e repositório remoto: Git e GitHub 
 
 ::::: columns
 ::: {.column width="50%"}
+
 ![](figuras/mee314108-fig-0002-m.jpeg){fig-align="center" width="100%"}
 :::
-
 ::: {.column width="50%"}
--   Inúmeras funcionalidades (Vizualização, armazenamento, colaboração etc.)
+- Inúmeras funcionalidades (Vizualização, armazenamento, colaboração etc.)
 
 ![](figuras/paper-pedro-mee.png){fig-align="center" width="80%"}
 :::
 :::::
 
-## Controle de versão e repositório remoto: Git, GitHub e RStudio
+## Controle de versão e repositório remoto: Git, GitHub e RStudio 
 
 ### E o RStudio?
 
-## Controle de versão e repositório remoto: RStudio
+## Controle de versão e repositório remoto: RStudio 
 
 ![](figuras/github-remote.png){fig-align="center" width="80%"}
 
-## Controle de versão e repositório remoto: Git, GitHub e RStudio
+## Controle de versão e repositório remoto: Git, GitHub e RStudio 
 
 ::::: columns
 ::: {.column width="50%"}
 ![](figuras/Fusao_Git_R.png){fig-align="center" width="80%"}
 :::
-
 ::: {.column width="50%"}
--   Funciona como um ambiente de desenvolvimento integrado
-    -   faz o track-changes
-    -   faz os commits
-    -   faz os pull e push
-    -   faz TUDO em um só lugar
+
+- Funciona como um ambiente de desenvolvimento integrado
+    + faz o track-changes
+    + faz os commits
+    + faz os pull e push
+    + faz TUDO em um só lugar
+
 :::
 :::::
+
 
 ## Controle de versão e repositório remoto: resumindo
 
@@ -120,16 +126,18 @@ format:
 
 ![](figuras/jenny-brian.jpeg){fig-align="center" width="70%"}
 
+
 ## Controle de versão: em caso de dúvidas
 
 ![](figuras/happy-git-jenny-brian.png){fig-align="center" width="80%"}
+
 
 ## [Prática](https://gabrielnakamura.github.io/USP_reproducibility_BIE5798/basics_git.html)
 
 ✅ Integrando Git, GitHub e RStudio
 
-✅ Comandos básicos - clone, pull, push e commit
+✅ Comandos básicos - clone, pull, push e commit 
 
 ✅ Navegando entre versões
 
-✅ Trabalho colaborativo - pull request, branchs
+✅  Trabalho colaborativo - pull request, branchs
