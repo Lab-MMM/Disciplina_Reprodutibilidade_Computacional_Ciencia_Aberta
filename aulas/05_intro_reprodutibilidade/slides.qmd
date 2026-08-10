@@ -14,21 +14,32 @@ format:
 library(tidyverse)
 ```
 
-## Olá! Quem somos {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Olá! Quem somos 
 
 ### Gabriel
 
 ![](figuras/thisIsBird.jpeg){fig-align="center" width="50%"}
 
-## O início {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## O início 
 
 ![](figuras/palestra-melina.png){fig-align="center" width="80%"}
 
-## Reprodutibilidade {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Reprodutibilidade 
 
-![](figuras/LOTR01.png){fig-align="center" width="70%"}
+::::: columns
+::: {.column width="50%"}
+![](figuras/o_agente_secreto.jpg){fig-align="center" width="60%"}
+:::
+::: {.column width="50%"}
+![](figuras/ainda_estou_aqui.jpg){fig-align="center" width="100%"}
+:::
+:::::
 
-## Reprodutibilidade: Por que? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+::: footer
+[É tempo de se falar sobre memória](https://static.even3.com/anais/1669326.pdf)
+:::
+
+## Reprodutibilidade: Por que? 
 
 ::::: columns
 ::: {.column width="50%"}
@@ -44,7 +55,7 @@ library(tidyverse)
 > **"O artigo científico é o Tinder da Ciência. Não é exatamente mentira, mas somos espertos o suficiente para não casar com alguém só pelo seu perfil aparente"**
 :::
 
-# Reprodutibilidade: a importância do processo {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+# Reprodutibilidade: a importância do processo 
 
 ![](figuras/nature-logo.png){fig-align="center" width="30%"}
 
@@ -52,7 +63,7 @@ library(tidyverse)
 
 ![](figuras/PNAS_logo.png){fig-align="center" width="30%"}
 
-## Reprodutibilidade: a importância do processo {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Reprodutibilidade: a importância do processo 
 
 ::::: columns
 ::: {.column width="50%"}
@@ -68,7 +79,7 @@ library(tidyverse)
 :::
 :::::
 
-## Reprodutibilidade: Por que? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Reprodutibilidade: Por que? 
 
 ::::: columns
 ::: {.column width="50%"}
@@ -80,11 +91,11 @@ library(tidyverse)
 :::
 :::::
 
-## Vivemos uma crise de reprodutibilidade? Sim! Por que? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Vivemos uma crise de reprodutibilidade? Sim! Por que? 
 
 ![](figuras/reproducibility_crisis_2.png){fig-align="center" width="90%"}
 
-## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Como resolver? 
 
 > "Reproducibility is like brushing your teeth. Once you learn it, it becomes a habit"
 
@@ -92,40 +103,42 @@ library(tidyverse)
 ![](figuras/factors_reproducible_solutions.png){fig-align="center" width="50%"}
 :::
 
-## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Como resolver? 
 
-![](figuras/factors_reproducible_solutions2.png){fig-align="center" width="60%"} \## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+![](figuras/factors_reproducible_solutions2.png){fig-align="center" width="60%"} 
+
+## Como resolver? 
 
 ![](figuras/lula-ppt%202.png){fig-align="center" width="80%"}
 
-## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Como resolver? 
 
 ::::: columns
 ::: {.column width="50%"}
-![](figuras/braga_et_al_MEE.png){fig-align="center" width="40%"}
+![](figuras/braga_et_al_MEE.png){fig-align="center" width="100%"}
 :::
 
 ::: {.column width="50%"}
-![](figuras/mee314108-fig-0002-m.jpeg){fig-align="center" width="80%"}
+![](figuras/mee314108-fig-0002-m.jpeg){fig-align="center" width="100%"}
 :::
 :::::
 
-## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Como resolver? 
 
 ![](figuras/mee314108-fig-0002-m.jpeg){fig-align="center" width="80%"}
 
-## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Como resolver? 
 
 ![](figuras/mee314108-fig-0002-m2.png){fig-align="center" width="80%"}
 
-## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Como resolver? 
 
 ![](figuras/mee314108-fig-0002-m3.png){fig-align="center" width="80%"}
 
-## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Como resolver? 
 
 ![](figuras/mee314108-fig-0002-m4.png){fig-align="center" width="80%"}
 
-## Como resolver? {.center .middle background-image="figuras/Clouds.jpg" background-size="cover"}
+## Como resolver? 
 
 ![](figuras/mee314108-fig-0002-m5.png){fig-align="center" width="80%"}

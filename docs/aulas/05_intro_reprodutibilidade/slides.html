@@ -30,70 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        background-color: #2a211c;
-        color: #bdae9d;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
-    div.sourceCode
-      { color: #bdae9d; background-color: #2a211c; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ffff00; } /* Alert */
-    code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { } /* Attribute */
-    code span.bn { color: #44aa43; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #049b0a; } /* Char */
-    code span.cn { } /* Constant */
-    code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
-    code span.do { color: #0066ff; font-style: italic; } /* Documentation */
-    code span.dt { text-decoration: underline; } /* DataType */
-    code span.dv { color: #44aa43; } /* DecVal */
-    code span.er { color: #ffff00; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #44aa43; } /* Float */
-    code span.fu { color: #ff9358; font-weight: bold; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
-    code span.op { } /* Operator */
-    code span.pp { font-weight: bold; } /* Preprocessor */
-    code span.sc { color: #049b0a; } /* SpecialChar */
-    code span.ss { color: #049b0a; } /* SpecialString */
-    code span.st { color: #049b0a; } /* String */
-    code span.va { } /* Variable */
-    code span.vs { color: #049b0a; } /* VerbatimString */
-    code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-6384821f323436685c600638bbb43fb4.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -207,53 +143,36 @@ Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos qua
 </div>
 
 </section>
-<section class="slide level2">
-
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tibble' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'purrr' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'dplyr' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.2.0     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.6.0
-✔ ggplot2   4.0.2     ✔ tibble    3.3.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.2
-✔ purrr     1.2.1     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-</div>
-</section>
-<section id="olá-quem-somos" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="olá-quem-somos" class="slide level2">
 <h2>Olá! Quem somos</h2>
 <h3 id="gabriel">Gabriel</h3>
 
 <img data-src="figuras/thisIsBird.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
-<section id="o-início" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="o-início" class="slide level2">
 <h2>O início</h2>
 
 <img data-src="figuras/palestra-melina.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="reprodutibilidade" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="reprodutibilidade" class="slide level2">
 <h2>Reprodutibilidade</h2>
-
-<img data-src="figuras/LOTR01.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
-<section id="reprodutibilidade-por-que" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figuras/o_agente_secreto.jpg" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figuras/ainda_estou_aqui.jpg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div></div>
+<div class="footer">
+<p><a href="https://static.even3.com/anais/1669326.pdf">É tempo de se falar sobre memória</a></p>
+</div>
+</section>
+<section id="reprodutibilidade-por-que" class="slide level2">
 <h2>Reprodutibilidade: Por que?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -276,7 +195,7 @@ Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos qua
 </div>
 </section>
 <section>
-<section id="reprodutibilidade-a-importância-do-processo" class="title-slide slide level1 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="reprodutibilidade-a-importância-do-processo" class="title-slide slide level1 center">
 <h1>Reprodutibilidade: a importância do processo</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -294,7 +213,7 @@ Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos qua
 </figure>
 </div>
 </section>
-<section id="reprodutibilidade-a-importância-do-processo-1" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="reprodutibilidade-a-importância-do-processo-1" class="slide level2">
 <h2>Reprodutibilidade: a importância do processo</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -311,7 +230,7 @@ Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos qua
 </ul>
 </div></div>
 </section>
-<section id="reprodutibilidade-por-que-1" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="reprodutibilidade-por-que-1" class="slide level2">
 <h2>Reprodutibilidade: Por que?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -328,11 +247,11 @@ Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos qua
 </div>
 </div></div>
 </section>
-<section id="vivemos-uma-crise-de-reprodutibilidade-sim-por-que" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="vivemos-uma-crise-de-reprodutibilidade-sim-por-que" class="slide level2">
 <h2>Vivemos uma crise de reprodutibilidade? Sim! Por que?</h2>
 
 <img data-src="figuras/reproducibility_crisis_2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section>
-<section id="como-resolver" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="como-resolver" class="slide level2">
 <h2>Como resolver?</h2>
 <blockquote>
 <p>“Reproducibility is like brushing your teeth. Once you learn it, it becomes a habit”</p>
@@ -345,49 +264,48 @@ Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos qua
 </div>
 </div>
 </section>
-<section id="como-resolver-1" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="como-resolver-1" class="slide level2">
 <h2>Como resolver?</h2>
-<p><img data-src="figuras/factors_reproducible_solutions2.png" class="quarto-figure quarto-figure-center" style="width:60.0%"> ## Como resolver? {.center .middle background-image=“figuras/Clouds.jpg” background-size=“cover”}</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="figuras/lula-ppt 2.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
-</figure>
-</div>
-</section>
-<section id="como-resolver-2" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+
+<img data-src="figuras/factors_reproducible_solutions2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"></section>
+<section id="como-resolver-2" class="slide level2">
+<h2>Como resolver?</h2>
+
+<img data-src="figuras/lula-ppt 2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<section id="como-resolver-3" class="slide level2">
 <h2>Como resolver?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="figuras/braga_et_al_MEE.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+<p><img data-src="figuras/braga_et_al_MEE.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="figuras/mee314108-fig-0002-m.jpeg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+<p><img data-src="figuras/mee314108-fig-0002-m.jpeg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div></div>
 </section>
-<section id="como-resolver-3" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="como-resolver-4" class="slide level2">
 <h2>Como resolver?</h2>
 
 <img data-src="figuras/mee314108-fig-0002-m.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="como-resolver-4" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="como-resolver-5" class="slide level2">
 <h2>Como resolver?</h2>
 
 <img data-src="figuras/mee314108-fig-0002-m2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="como-resolver-5" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="como-resolver-6" class="slide level2">
 <h2>Como resolver?</h2>
 
 <img data-src="figuras/mee314108-fig-0002-m3.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="como-resolver-6" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="como-resolver-7" class="slide level2">
 <h2>Como resolver?</h2>
 
 <img data-src="figuras/mee314108-fig-0002-m4.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="como-resolver-7" class="slide level2 center middle" data-background-image="figuras/Clouds.jpg" data-background-size="cover">
+<section id="como-resolver-8" class="slide level2">
 <h2>Como resolver?</h2>
 
 
@@ -610,6 +528,44 @@ Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos qua
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
