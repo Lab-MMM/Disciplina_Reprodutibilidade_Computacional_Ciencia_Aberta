@@ -1,6 +1,5 @@
 ---
-title: "Viajando no tempo"
-subtitle: "explorando commits"
+title: "Fundamentos e ferramentas do versionamento"
 author: "Gabriel Nakamura | Laboratório de Macroecologia, Macroevolução e Métodos quantitativos"
 
 format: 

@@ -116,7 +116,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -128,7 +128,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -140,7 +140,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -152,7 +152,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -164,7 +164,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -176,7 +176,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -188,7 +188,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -200,7 +200,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -212,7 +212,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -224,7 +224,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Ferramentas para controle de versão"
+      "Por que reprodutibilidade?"
     ]
   },
   {
@@ -668,112 +668,112 @@
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git, GitHub e RStudio",
     "text": "Controle de versão e repositório remoto: Git, GitHub e RStudio"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-1",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-1",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git, GitHub e RStudio",
     "text": "Controle de versão e repositório remoto: Git, GitHub e RStudio\nO que é Git, GitHub e quais diferenças?"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-2",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-2",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git, GitHub e RStudio",
     "text": "Controle de versão e repositório remoto: Git, GitHub e RStudio"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-3",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-3",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git, GitHub e RStudio",
     "text": "Controle de versão e repositório remoto: Git, GitHub e RStudio\nGit"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git",
     "text": "Controle de versão e repositório remoto: Git\n\n\n \n\n\nConcebido para grandes projetos colaborativos (Linux)\nExecuta todo o controle de versões\nFunciona independente de um repositório remoto"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-4",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-4",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git, GitHub e RStudio",
     "text": "Controle de versão e repositório remoto: Git, GitHub e RStudio\nGithub"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-github",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-github",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: GitHub",
     "text": "Controle de versão e repositório remoto: GitHub\n\n\n\n\n\n\n\n\n\nRepositório remoto (a nuvem)\nOutros tipos de repositório (ex. Gitlab)\nInúmeras funcionalidades (Vizualização, armazenamento, colaboração etc.)"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-5",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-5",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git, GitHub e RStudio",
     "text": "Controle de versão e repositório remoto: Git, GitHub e RStudio\nDiferenças e usos do Git e GitHub?"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-e-github",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-e-github",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git e GitHub",
     "text": "Controle de versão e repositório remoto: Git e GitHub\n\n\n\n\n\n\n\n\n\nInúmeras funcionalidades (Vizualização, armazenamento, colaboração etc.)"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-6",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-6",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git, GitHub e RStudio",
     "text": "Controle de versão e repositório remoto: Git, GitHub e RStudio\nE o RStudio?"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-rstudio",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-rstudio",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: RStudio",
     "text": "Controle de versão e repositório remoto: RStudio"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-7",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-git-github-e-rstudio-7",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: Git, GitHub e RStudio",
     "text": "Controle de versão e repositório remoto: Git, GitHub e RStudio\n\n\n\n\n\n\n\n\n\nFunciona como um ambiente de desenvolvimento integrado\n\nfaz o track-changes\nfaz os commits\nfaz os pull e push\nfaz TUDO em um só lugar"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-resumindo",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-e-repositório-remoto-resumindo",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão e repositório remoto: resumindo",
     "text": "Controle de versão e repositório remoto: resumindo"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-em-caso-de-dúvidas",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-em-caso-de-dúvidas",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão: em caso de dúvidas",
     "text": "Controle de versão: em caso de dúvidas"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#controle-de-versão-em-caso-de-dúvidas-1",
     "href": "aulas/06_git_github_basics/slides.html#controle-de-versão-em-caso-de-dúvidas-1",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Controle de versão: em caso de dúvidas",
     "text": "Controle de versão: em caso de dúvidas"
   },
   {
     "objectID": "aulas/06_git_github_basics/slides.html#prática",
     "href": "aulas/06_git_github_basics/slides.html#prática",
-    "title": "Viajando no tempo",
+    "title": "Fundamentos e ferramentas do versionamento",
     "section": "Prática",
     "text": "Prática\n✅ Integrando Git, GitHub e RStudio\n✅ Comandos básicos - clone, pull, push e commit\n✅ Navegando entre versões\n✅ Trabalho colaborativo - pull request, branchs"
   },

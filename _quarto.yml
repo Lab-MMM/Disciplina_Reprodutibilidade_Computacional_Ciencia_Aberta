@@ -48,7 +48,7 @@ website:
             href: aulas/04_organizacao_scripts/index.qmd
         - section: "Versionamento"
           contents: 
-          - text: "Ferramentas para controle de versão"
+          - text: "Por que reprodutibilidade?"
             href: aulas/05_intro_reprodutibilidade/index.qmd
           - text: "Introdução ao controle de versão"
             href: aulas/06_git_github_basics/index.qmd
