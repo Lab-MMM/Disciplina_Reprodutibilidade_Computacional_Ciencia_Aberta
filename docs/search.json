@@ -116,7 +116,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -128,7 +128,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -140,7 +140,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -152,7 +152,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -164,7 +164,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -176,7 +176,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -188,7 +188,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -200,7 +200,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -212,7 +212,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -224,7 +224,7 @@
     "crumbs": [
       "Aulas",
       "Versionamento",
-      "Por que reprodutibilidade?"
+      "Ferramentas para controle de versão"
     ]
   },
   {
@@ -385,7 +385,7 @@
     "href": "index.html",
     "title": "Reprodutibilidade computacional em Ecologia e Evolução",
     "section": "",
-    "text": "Dia\nData\nTópico\nDescrição\nRoteiros e códigos\nSlides\nLeituras\n\n\n\n\n1\n10/08\nCiência Aberta | Reprodutibilidade computacional | Apresentação da disciplina\nO movimento da ciência aberta, ferramentas computacionais para garantir um trabalho reprodutivo, dinâmica da disciplina\n💻\n📽\n📚\n\n\n2\n11/08\nOrganização do diretório de trabalho e scripts | Introdução ao controle de versão\nConhecendo os caminhos no computador | Pequena introdução ao terminal | Estrutura hierárquica de diretórios | Introdução ao Git como ferramenta para controle de versão\n💻\n📽\n📚\n\n\n3\n12/08\nRepositórios locais e remotos | Integração com IDE (RStudio) | Práticas em controle de versão\nUtilizando o Git e o Github de maneira integrada através do RStudio | Ações básicas para versionar seu repositório\n💻\n📽\n📚\n\n\n4\n13/07\nTrabalho colaborativo | Literate programming | Revisão de código\nUtilizando branches, forks, issues e resolvendo conflitos em trabalhos colaborativos | Utilizando markdown para produção de relatórios científicos, manuscritos e sites | Rodada de revisão de código entre participantes\n💻\n📽\n📚\n\n\n5\n14/07\nManejando versões de pacotes | Organizando o fluxo de trabalho | Finalização\nUtilização de ferramentas para manejar versões de pacotes e organização de fluxos de trabalho (renv e targets)\n💻\n📽\n📚",
+    "text": "Dia\nData\nTópico\nDescrição\nRoteiros e códigos\nSlides\nLeituras\n\n\n\n\n1\n10/08\nCiência Aberta | Reprodutibilidade computacional | Apresentação da disciplina\nO movimento da ciência aberta, ferramentas computacionais para garantir um trabalho reprodutivo, dinâmica da disciplina\n💻\n\n📚\n\n\n2\n11/08\nOrganização do diretório de trabalho e scripts | Introdução ao controle de versão\nConhecendo os caminhos no computador | Pequena introdução ao terminal | Estrutura hierárquica de diretórios | Introdução ao Git como ferramenta para controle de versão\n💻\n📽\n\n\n\n3\n12/08\nRepositórios locais e remotos | Integração com IDE (RStudio) | Práticas em controle de versão\nUtilizando o Git e o Github de maneira integrada através do RStudio | Ações básicas para versionar seu repositório\n💻\n📽\n📚\n\n\n4\n13/07\nTrabalho colaborativo | Literate programming | Revisão de código\nUtilizando branches, forks, issues e resolvendo conflitos em trabalhos colaborativos | Utilizando markdown para produção de relatórios científicos, manuscritos e sites | Rodada de revisão de código entre participantes\n💻\n📽\n📚\n\n\n5\n14/07\nManejando versões de pacotes | Organizando o fluxo de trabalho | Finalização\nUtilização de ferramentas para manejar versões de pacotes e organização de fluxos de trabalho (renv e targets)\n💻\n📽\n📚",
     "crumbs": [
       "Informações sobre o curso",
       "Cronograma do curso"

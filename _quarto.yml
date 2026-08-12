@@ -48,14 +48,17 @@ website:
             href: aulas/04_organizacao_scripts/index.qmd
         - section: "Versionamento"
           contents: 
-          - text: "Por que reprodutibilidade?"
+          - text: "Ferramentas para controle de versão"
             href: aulas/05_intro_reprodutibilidade/index.qmd
           - text: "Introdução ao controle de versão"
             href: aulas/06_git_github_basics/index.qmd
           - text: "Viajando no tempo"
             href: aulas/07_navegando_versoes/index.qmd
           - text: "Trabalho colaborativo - branches, forks, pull requests, issues"
-            href: aulas/aula3_descricao-padroes_II/index.qmd
+          - text: "Ignorando e manejando arquivos"
+            href: aulas/08_ignorando_manejando_arquivos/index.qmd
+          - text: "Trabalho colaborativo"
+            href: aulas/09_colaboracao_github/index.qmd
           - text: "Conflitos e como evitá-los (ou resolvê-los)"
             href: aulas/aula3_descricao-padroes_II/index.qmd
           - text: "Versionando pacotes e dependências"
