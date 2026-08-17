@@ -73,6 +73,12 @@ website:
             href: aulas/aula3_descricao-padroes_II/index.qmd
           - text: "Além do artigo - materiais suplementares, vinhetas, sítios públicos"
             href: aulas/aula3_descricao-padroes_II/index.qmd
+        - section: "Manejo de ambientes"
+          contents:
+          - text: "Utilizando o pacote renv"
+            href: aulas/aula3_descricao-padroes_II/index.qmd
+          - text: "Outras alternativas"
+            href: aulas/aula3_descricao-padroes_II/index.qmd
 format:
   html:
     theme:
